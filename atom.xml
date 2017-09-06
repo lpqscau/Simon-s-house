@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Simon-s-house</title>
-  <subtitle>Do waht I want. Seek for true happiness</subtitle>
-  <link href="/Simon-s-house/atom.xml" rel="self"/>
+  <subtitle>世界那么大，我想带你去看看</subtitle>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
+  <link href="https://github.com/simonisacoder/Simon-s-house.git/"/>
   <updated>2017-09-06T09:39:12.942Z</updated>
-  <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
+  <id>https://github.com/simonisacoder/Simon-s-house.git/</id>
   
   <author>
     <name>Simon</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>新学期半段计划</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/06/%E6%96%B0%E5%AD%A6%E6%9C%9F%E5%8D%8A%E6%AE%B5%E8%AE%A1%E5%88%92/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/06/新学期半段计划/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/09/06/%E6%96%B0%E5%AD%A6%E6%9C%9F%E5%8D%8A%E6%AE%B5%E8%AE%A1%E5%88%92/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/09/06/新学期半段计划/</id>
     <published>2017-09-06T08:54:25.000Z</published>
     <updated>2017-09-06T09:39:12.942Z</updated>
     
@@ -38,16 +38,16 @@
     </summary>
     
     
-      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/essay/"/>
+      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/essay/"/>
     
-      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/program/"/>
     
   </entry>
   
   <entry>
     <title>atom捣鼓</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/05/14/atom%E6%8D%A3%E9%BC%93/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/05/14/atom捣鼓/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/05/14/atom%E6%8D%A3%E9%BC%93/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/05/14/atom捣鼓/</id>
     <published>2017-05-14T14:37:47.000Z</published>
     <updated>2017-09-05T15:29:46.701Z</updated>
     
@@ -56,16 +56,16 @@
     </summary>
     
     
-      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/program/"/>
     
-      <category term="test" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/test/"/>
+      <category term="test" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/test/"/>
     
   </entry>
   
   <entry>
     <title>小议言论自由</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/04/08/%E5%B0%8F%E8%AE%AE%E8%A8%80%E8%AE%BA%E8%87%AA%E7%94%B1/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/04/08/小议言论自由/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/04/08/%E5%B0%8F%E8%AE%AE%E8%A8%80%E8%AE%BA%E8%87%AA%E7%94%B1/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/04/08/小议言论自由/</id>
     <published>2017-04-08T10:58:48.000Z</published>
     <updated>2017-09-05T14:48:59.543Z</updated>
     
@@ -81,14 +81,14 @@
     </summary>
     
     
-      <category term="debate" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/debate/"/>
+      <category term="debate" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/debate/"/>
     
   </entry>
   
   <entry>
     <title>ICUT</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/28/ICUT/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/28/ICUT/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/03/28/ICUT/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/03/28/ICUT/</id>
     <published>2017-03-28T01:11:13.000Z</published>
     <updated>2017-09-05T15:00:12.636Z</updated>
     
@@ -97,16 +97,16 @@
     </summary>
     
     
-      <category term="debate" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/debate/"/>
+      <category term="debate" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/debate/"/>
     
-      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/essay/"/>
+      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/essay/"/>
     
   </entry>
   
   <entry>
     <title>markdown pad</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/14/markdown-pad/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/14/markdown-pad/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/03/14/markdown-pad/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/03/14/markdown-pad/</id>
     <published>2017-03-14T14:05:29.000Z</published>
     <updated>2017-09-05T15:02:45.281Z</updated>
     
@@ -132,14 +132,14 @@
     </summary>
     
     
-      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/program/"/>
     
   </entry>
   
   <entry>
     <title>motion analysis of CCC</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/07/motion-analysis-of-CCC/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/07/motion-analysis-of-CCC/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/03/07/motion-analysis-of-CCC/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/03/07/motion-analysis-of-CCC/</id>
     <published>2017-03-07T07:50:05.000Z</published>
     <updated>2017-03-07T11:41:06.509Z</updated>
     
@@ -191,14 +191,14 @@
     </summary>
     
     
-      <category term="debate" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/debate/"/>
+      <category term="debate" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/debate/"/>
     
   </entry>
   
   <entry>
     <title>markdown进阶</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown%E8%BF%9B%E9%98%B6/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown进阶/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/03/06/markdown%E8%BF%9B%E9%98%B6/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/03/06/markdown进阶/</id>
     <published>2017-03-06T10:53:29.000Z</published>
     <updated>2017-03-07T11:41:20.282Z</updated>
     
@@ -277,16 +277,16 @@
     </summary>
     
     
-      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/program/"/>
     
-      <category term="markdown" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/markdown/"/>
+      <category term="markdown" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/markdown/"/>
     
   </entry>
   
   <entry>
     <title>markdown learning</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/03/06/markdown-learning/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/03/06/markdown-learning/</id>
     <published>2017-03-06T10:53:29.000Z</published>
     <updated>2017-03-07T09:09:14.333Z</updated>
     
@@ -353,14 +353,14 @@
     </summary>
     
     
-      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/program/"/>
     
   </entry>
   
   <entry>
     <title>I am tired of building this!</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/05/I-am-tired-of-building-this/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/05/I-am-tired-of-building-this/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/03/05/I-am-tired-of-building-this/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/03/05/I-am-tired-of-building-this/</id>
     <published>2017-03-05T03:35:54.000Z</published>
     <updated>2017-03-07T07:48:43.121Z</updated>
     
@@ -369,14 +369,14 @@
     </summary>
     
     
-      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/essay/"/>
+      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/essay/"/>
     
   </entry>
   
   <entry>
     <title>Simon is very angry!</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/05/Simon-is-very-angry/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/05/Simon-is-very-angry/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/03/05/Simon-is-very-angry/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/03/05/Simon-is-very-angry/</id>
     <published>2017-03-05T02:12:21.000Z</published>
     <updated>2017-03-07T07:48:34.537Z</updated>
     
@@ -391,14 +391,14 @@
     </summary>
     
     
-      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/essay/"/>
+      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/essay/"/>
     
   </entry>
   
   <entry>
     <title>Simon&#39;s new personal blog</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/05/Simon-s-new-personal-blog/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/05/Simon-s-new-personal-blog/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/03/05/Simon-s-new-personal-blog/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/03/05/Simon-s-new-personal-blog/</id>
     <published>2017-03-05T01:59:08.000Z</published>
     <updated>2017-03-05T01:59:08.498Z</updated>
     
@@ -411,8 +411,8 @@
   
   <entry>
     <title>Simon&#39;s personal blog</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/04/Simon-s-personal-blog/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/04/Simon-s-personal-blog/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/03/04/Simon-s-personal-blog/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/03/04/Simon-s-personal-blog/</id>
     <published>2017-03-04T12:28:49.000Z</published>
     <updated>2017-03-07T05:15:15.054Z</updated>
     
@@ -421,14 +421,14 @@
     </summary>
     
     
-      <category term="随笔" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://github.com/simonisacoder/Simon-s-house.git/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/04/hello-world/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/04/hello-world/</id>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/2017/03/04/hello-world/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/2017/03/04/hello-world/</id>
     <published>2017-03-04T12:18:48.158Z</published>
     <updated>2017-03-04T12:18:48.161Z</updated>
     
