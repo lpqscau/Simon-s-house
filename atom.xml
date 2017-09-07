@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-09-06T09:39:12.942Z</updated>
+  <updated>2017-09-07T19:08:40.679Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -14,6 +14,77 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>KNN算法及python问题</title>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/08/KNN%E7%AE%97%E6%B3%95%E5%8F%8Apython%E5%B0%8F%E8%AF%95%E2%80%9C/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/08/KNN算法及python小试“/</id>
+    <published>2017-09-07T17:22:04.000Z</published>
+    <updated>2017-09-07T19:08:40.679Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="机器学习实战之KNN"><a href="#机器学习实战之KNN" class="headerlink" title="机器学习实战之KNN"></a>机器学习实战之KNN</h1><h2 id="创造数据集"><a href="#创造数据集" class="headerlink" title="创造数据集"></a>创造数据集</h2><pre><code>from numpy import *
+import operator
+def createDataSet():
+    group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
+    labels = [&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;B&#39;]
+return group,labels
+</code></pre><p>创造一个4*2的array，数值可理解为坐标，label就是对应分类</p>
+<blockquote>
+<p>python 时间<br><br>tile的作用是把一个矩阵复制出一个新的矩阵，如A是一个矩阵</p>
+<pre><code>tile(A,1) = A
+tile（A,2,3)就是把A作为一个元素，复制成新的2*3的矩阵，每一个元素就是一个A
+---------------------
+shape是获取矩阵的size的函数
+A = [1,2,3;4,5,6;7,8,9]
+A.shape = (3,3)
+A.shape[0] = A.shape[1] = A.shape[2] = 3
+---------------------
+argsort是一个排序后获取下标的函数
+A = [5,4,3,1,2]
+B = A.argsort() = [3,4,2,1,0]
+---------------------
+itemgetter是operator的一个函数
+b=operator.itemgetter(n-1)
+b成为获取对象第n个元素的函数
+A = [1,2,3]
+b(A) = 2
+</code></pre></blockquote>
+<p>完整代码</p>
+<pre><code>py import *
+import operator
+
+def createDataSet():
+    group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
+    labels = [&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;B&#39;]
+    return group,labels
+def classify0(inX,dataSet,labels,k):
+    dataSetSize = dataSet.shape[0]
+    diffMat = tile(inX,(dataSetSize,1)) - dataSet
+    sqDiffMat = diffMat ** 2
+    sqDistances = sqDiffMat.sum(axis=1)
+    distances = sqDistances ** 0.5
+
+    sortedDistIndicies = distances.argsort()
+    classCount = {}
+    for i in range(k):
+        voteIlabel = labels[sortedDistIndicies[i]]
+        classCount[voteIlabel] = classCount.get(voteIlabel,0) + 1
+    sortedClassCount = sorted(classCount.iteritems(),key=operator.itemgetter(1),reverse=True)
+    return sortedClassCount[0][0]
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;机器学习实战之KNN&quot;&gt;&lt;a href=&quot;#机器学习实战之KNN&quot; class=&quot;headerlink&quot; title=&quot;机器学习实战之KNN&quot;&gt;&lt;/a&gt;机器学习实战之KNN&lt;/h1&gt;&lt;h2 id=&quot;创造数据集&quot;&gt;&lt;a href=&quot;#创造数据集&quot; class=&quot;he
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/machine-learning/"/>
+    
+      <category term="python" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>新学期半段计划</title>
@@ -196,6 +267,80 @@
   </entry>
   
   <entry>
+    <title>markdown learning</title>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/</id>
+    <published>2017-03-06T10:53:29.000Z</published>
+    <updated>2017-03-07T09:09:14.333Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="markdown初养成"><a href="#markdown初养成" class="headerlink" title="markdown初养成"></a>markdown初养成</h2><blockquote>
+<p>引用就是文本前面加 “&gt; ”（含空格不含引号）</p>
+</blockquote>
+<h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p> <a href="http://baidu.com" target="_blank" rel="external">这是一个百度链接</a></p>
+<h3 id="html插入图片法"><a href="#html插入图片法" class="headerlink" title="html插入图片法"></a>html插入图片法</h3><p> <img src="img/face.JPG" width="200" height="250"></p>
+<blockquote>
+<p>   这是第一段文字<br>   现在我来示范嵌套文字</p>
+<blockquote>
+<p>   这是被嵌套的文字</p>
+</blockquote>
+<p>　因为空格会被忽略，所以shift+space切换成全角模式再按space</p>
+</blockquote>
+<p> 1.这是一个无序列表（可用星号、加号减号后面接空格）</p>
+<ul>
+<li>F</li>
+</ul>
+<ul>
+<li>U</li>
+</ul>
+<ul>
+<li>C</li>
+</ul>
+<ul>
+<li>K</li>
+</ul>
+<p>·.这是一个有序列表</p>
+<ol>
+<li>Mon </li>
+<li>Tue </li>
+<li>Wed</li>
+<li>Thu</li>
+<li>Fri</li>
+<li>Sat</li>
+<li>Sun</li>
+</ol>
+<p>·.多级目录</p>
+<pre><code>1. 1
+</code></pre><p><strong>这是一段粗体</strong></p>
+<p><em>这是一段斜体</em></p>
+<p><del>删除效果</del></p>
+<blockquote>
+<p>行内标记’我被强调了’</p>
+<p>打符号要加斜杠\,我是个星号*</p>
+</blockquote>
+<pre>
+    For(;;)     
+        cout << "This is a segment of fake code!";
+</pre>
+
+<pre><code>    this is my code;
+    Thanks!
+</code></pre><p>最后这是我的邮箱<a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x39;&#x32;&#x31;&#x31;&#x38;&#49;&#x35;&#52;&#57;&#x40;&#113;&#113;&#46;&#x63;&#x6f;&#x6d;">&#x39;&#x32;&#x31;&#x31;&#x38;&#49;&#x35;&#52;&#57;&#x40;&#113;&#113;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<hr>
+<h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;markdown初养成&quot;&gt;&lt;a href=&quot;#markdown初养成&quot; class=&quot;headerlink&quot; title=&quot;markdown初养成&quot;&gt;&lt;/a&gt;markdown初养成&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;引用就是文本前面加 “&amp;gt; ”（含空格
+    
+    </summary>
+    
+    
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
     <title>markdown进阶</title>
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown%E8%BF%9B%E9%98%B6/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown进阶/</id>
@@ -254,7 +399,7 @@
 
 <pre><code>    this is my code;
     Thanks!
-</code></pre><p>最后这是我的邮箱<a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#57;&#50;&#49;&#49;&#x38;&#x31;&#x35;&#x34;&#x39;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">&#57;&#50;&#49;&#49;&#x38;&#x31;&#x35;&#x34;&#x39;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#109;</a></p>
+</code></pre><p>最后这是我的邮箱<a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#57;&#50;&#x31;&#49;&#x38;&#x31;&#53;&#52;&#57;&#x40;&#x71;&#113;&#46;&#99;&#111;&#109;">&#57;&#50;&#x31;&#49;&#x38;&#x31;&#53;&#52;&#57;&#x40;&#x71;&#113;&#46;&#99;&#111;&#109;</a></p>
 <hr>
 <h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2><hr>
 <p>title: markdown进阶<br>date: 2017-03-07 00:11:02</p>
@@ -280,80 +425,6 @@
       <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
     
       <category term="markdown" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdown learning</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/</id>
-    <published>2017-03-06T10:53:29.000Z</published>
-    <updated>2017-03-07T09:09:14.333Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="markdown初养成"><a href="#markdown初养成" class="headerlink" title="markdown初养成"></a>markdown初养成</h2><blockquote>
-<p>引用就是文本前面加 “&gt; ”（含空格不含引号）</p>
-</blockquote>
-<h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p> <a href="http://baidu.com" target="_blank" rel="external">这是一个百度链接</a></p>
-<h3 id="html插入图片法"><a href="#html插入图片法" class="headerlink" title="html插入图片法"></a>html插入图片法</h3><p> <img src="img/face.JPG" width="200" height="250"></p>
-<blockquote>
-<p>   这是第一段文字<br>   现在我来示范嵌套文字</p>
-<blockquote>
-<p>   这是被嵌套的文字</p>
-</blockquote>
-<p>　因为空格会被忽略，所以shift+space切换成全角模式再按space</p>
-</blockquote>
-<p> 1.这是一个无序列表（可用星号、加号减号后面接空格）</p>
-<ul>
-<li>F</li>
-</ul>
-<ul>
-<li>U</li>
-</ul>
-<ul>
-<li>C</li>
-</ul>
-<ul>
-<li>K</li>
-</ul>
-<p>·.这是一个有序列表</p>
-<ol>
-<li>Mon </li>
-<li>Tue </li>
-<li>Wed</li>
-<li>Thu</li>
-<li>Fri</li>
-<li>Sat</li>
-<li>Sun</li>
-</ol>
-<p>·.多级目录</p>
-<pre><code>1. 1
-</code></pre><p><strong>这是一段粗体</strong></p>
-<p><em>这是一段斜体</em></p>
-<p><del>删除效果</del></p>
-<blockquote>
-<p>行内标记’我被强调了’</p>
-<p>打符号要加斜杠\,我是个星号*</p>
-</blockquote>
-<pre>
-    For(;;)     
-        cout << "This is a segment of fake code!";
-</pre>
-
-<pre><code>    this is my code;
-    Thanks!
-</code></pre><p>最后这是我的邮箱<a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x39;&#x32;&#x31;&#49;&#56;&#49;&#x35;&#x34;&#57;&#64;&#113;&#113;&#46;&#x63;&#x6f;&#109;">&#x39;&#x32;&#x31;&#49;&#56;&#49;&#x35;&#x34;&#57;&#64;&#113;&#113;&#46;&#x63;&#x6f;&#109;</a></p>
-<hr>
-<h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;markdown初养成&quot;&gt;&lt;a href=&quot;#markdown初养成&quot; class=&quot;headerlink&quot; title=&quot;markdown初养成&quot;&gt;&lt;/a&gt;markdown初养成&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;引用就是文本前面加 “&amp;gt; ”（含空格
-    
-    </summary>
-    
-    
-      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
     
   </entry>
   
