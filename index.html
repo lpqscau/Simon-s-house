@@ -251,56 +251,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="机器学习实战之KNN"><a href="#机器学习实战之KNN" class="headerlink" title="机器学习实战之KNN"></a>机器学习实战之KNN</h1><h2 id="创造数据集"><a href="#创造数据集" class="headerlink" title="创造数据集"></a>创造数据集</h2><pre><code>from numpy import *
+              <h1 id="机器学习实战之KNN"><a href="#机器学习实战之KNN" class="headerlink" title="机器学习实战之KNN"></a>机器学习实战之KNN</h1><h2 id="创造数据集"><a href="#创造数据集" class="headerlink" title="创造数据集"></a>创造数据集</h2><pre><code>from numpy import *
 import operator
 def createDataSet():
     group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
     labels = [&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;B&#39;]
 return group,labels
-</code></pre><p>创造一个4*2的array，数值可理解为坐标，label就是对应分类</p>
-<blockquote>
-<p>python 时间<br><br>tile的作用是把一个矩阵复制出一个新的矩阵，如A是一个矩阵</p>
-<pre><code>tile(A,1) = A
-tile（A,2,3)就是把A作为一个元素，复制成新的2*3的矩阵，每一个元素就是一个A
----------------------
-shape是获取矩阵的size的函数
-A = [1,2,3;4,5,6;7,8,9]
-A.shape = (3,3)
-A.shape[0] = A.shape[1] = A.shape[2] = 3
----------------------
-argsort是一个排序后获取下标的函数
-A = [5,4,3,1,2]
-B = A.argsort() = [3,4,2,1,0]
----------------------
-itemgetter是operator的一个函数
-b=operator.itemgetter(n-1)
-b成为获取对象第n个元素的函数
-A = [1,2,3]
-b(A) = 2
-</code></pre></blockquote>
-<p>完整代码</p>
-<pre><code>py import *
-import operator
-
-def createDataSet():
-    group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
-    labels = [&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;B&#39;]
-    return group,labels
-def classify0(inX,dataSet,labels,k):
-    dataSetSize = dataSet.shape[0]
-    diffMat = tile(inX,(dataSetSize,1)) - dataSet
-    sqDiffMat = diffMat ** 2
-    sqDistances = sqDiffMat.sum(axis=1)
-    distances = sqDistances ** 0.5
-
-    sortedDistIndicies = distances.argsort()
-    classCount = {}
-    for i in range(k):
-        voteIlabel = labels[sortedDistIndicies[i]]
-        classCount[voteIlabel] = classCount.get(voteIlabel,0) + 1
-    sortedClassCount = sorted(classCount.iteritems(),key=operator.itemgetter(1),reverse=True)
-    return sortedClassCount[0][0]
-</code></pre>
+</code></pre><p>创造一个4*2的array，数值可理解为坐标，label就是对应分类<br>
+          
       
       
     </div>
@@ -314,6 +272,10 @@ def classify0(inX,dataSet,labels,k):
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/machine-learning/">machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/python/">python</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/Simon-s-house/2017/09/08/KNN算法及python小试“/#more">read more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
