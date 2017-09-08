@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-09-07T19:11:01.169Z</updated>
+  <updated>2017-09-08T04:53:07.986Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/08/KNN%E7%AE%97%E6%B3%95%E5%8F%8Apython%E5%B0%8F%E8%AF%95%E2%80%9C/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/08/KNN算法及python小试“/</id>
     <published>2017-09-07T17:22:04.000Z</published>
-    <updated>2017-09-07T19:11:01.169Z</updated>
+    <updated>2017-09-08T04:53:07.986Z</updated>
     
     <content type="html"><![CDATA[<h1 id="机器学习实战之KNN"><a href="#机器学习实战之KNN" class="headerlink" title="机器学习实战之KNN"></a>机器学习实战之KNN</h1><h2 id="创造数据集"><a href="#创造数据集" class="headerlink" title="创造数据集"></a>创造数据集</h2><pre><code>from numpy import *
 import operator
@@ -29,48 +29,68 @@ def createDataSet():
     labels = [&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;B&#39;]
 return group,labels
 </code></pre><p>创造一个4*2的array，数值可理解为坐标，label就是对应分类<br><a id="more"></a></p>
-<blockquote>
-<p>python 时间<br><br>tile的作用是把一个矩阵复制出一个新的矩阵，如A是一个矩阵</p>
+<h2 id="python时间"><a href="#python时间" class="headerlink" title="python时间"></a>python时间</h2><h3 id="tile"><a href="#tile" class="headerlink" title="tile"></a>tile</h3><p>tile的作用是把一个矩阵复制出一个新的矩阵，如A是一个矩阵</p>
 <pre><code>tile(A,1) = A
 tile（A,2,3)就是把A作为一个元素，复制成新的2*3的矩阵，每一个元素就是一个A
----------------------
-shape是获取矩阵的size的函数
-A = [1,2,3;4,5,6;7,8,9]
+</code></pre><h3 id="shape"><a href="#shape" class="headerlink" title="shape"></a>shape</h3><p>shape是获取矩阵的size的函数</p>
+<pre><code>A = [1,2,3;4,5,6;7,8,9]
 A.shape = (3,3)
 A.shape[0] = A.shape[1] = A.shape[2] = 3
----------------------
-argsort是一个排序后获取下标的函数
-A = [5,4,3,1,2]
+</code></pre><h3 id="argsort"><a href="#argsort" class="headerlink" title="argsort"></a>argsort</h3><p>argsort是一个排序后获取下标的函数</p>
+<pre><code>A = [5,4,3,1,2]
 B = A.argsort() = [3,4,2,1,0]
----------------------
-itemgetter是operator的一个函数
-b=operator.itemgetter(n-1)
+</code></pre><h3 id="itemgetter"><a href="#itemgetter" class="headerlink" title="itemgetter"></a>itemgetter</h3><p>itemgetter是operator的一个函数</p>
+<pre><code>b=operator.itemgetter(n-1)
 b成为获取对象第n个元素的函数
 A = [1,2,3]
 b(A) = 2
-</code></pre></blockquote>
-<p>完整代码</p>
-<pre><code>py import *
+</code></pre><h3 id="axis"><a href="#axis" class="headerlink" title="axis"></a>axis</h3><p>axis是表示矩阵的行列的</p>
+<pre><code>a = [1,2,3; 4,5,6]
+axis默认为0，表示列
+a.sum() = 21
+a.sum(axis=0) = [5,7,9] 列求和
+a.sum(axis=1) = [6,15]  行求和
+</code></pre><h3 id="dict-get"><a href="#dict-get" class="headerlink" title="dict.get"></a>dict.get</h3><pre><code>python中的字典dict，获取对应值有两种方式
+1. key2 = dict[key1] ,但是假如字典不存在key1会发生错误
+2. key2 = dict.get(key1,default) 当不存在key1，返回默认值default
+</code></pre><h2 id="完整代码及注释"><a href="#完整代码及注释" class="headerlink" title="完整代码及注释"></a>完整代码及注释</h2><pre><code>py import *
 import operator
 
 def createDataSet():
     group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
     labels = [&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;B&#39;]
     return group,labels
-def classify0(inX,dataSet,labels,k):
-    dataSetSize = dataSet.shape[0]
-    diffMat = tile(inX,(dataSetSize,1)) - dataSet
-    sqDiffMat = diffMat ** 2
-    sqDistances = sqDiffMat.sum(axis=1)
-    distances = sqDistances ** 0.5
+#上面函数是根据已有的数据，创造数据集
 
+def classify0(inX,dataSet,labels,k):
+    #inX是待分类的数据，dataSet是已知的数据集，labels是已知数据集的分类，k是算法抽取的最相邻点的数量
+    dataSetSize = dataSet.shape[0]
+        #获取dataSet的点的个数
+    diffMat = tile(inX,(dataSetSize,1)) - dataSet
+        #tile函数把待分类点组成一个n维向量，再和原有数据集每个点作差
+        #相当于，得到(x-x1),(x-x2),(x-x3)···
+    sqDiffMat = diffMat ** 2
+        #(x-x1)^2 ···
+    sqDistances = sqDiffMat.sum(axis=1)
+        #各个维度的差的平方求和
+    distances = sqDistances ** 0.5
+        #和开方最终得到欧式距离
     sortedDistIndicies = distances.argsort()
+        #根据求得的距离进行排序，并得到对应的数据集的下标
     classCount = {}
+        #新建字典，放置距离小的数据的标签及其对应数量
     for i in range(k):
+        #放置距离小的前K个点
         voteIlabel = labels[sortedDistIndicies[i]]
+            #根据下标得到当前这个数据点的label
         classCount[voteIlabel] = classCount.get(voteIlabel,0) + 1
+            #字典中label对应值+1
     sortedClassCount = sorted(classCount.iteritems(),key=operator.itemgetter(1),reverse=True)
+        #根据字典的key2进行排序
+        sorted classCount
     return sortedClassCount[0][0]
+        #排序产生的是一个列表，列表的元素是一个tuple
+        #返回出现最多的标签，也就是最终分类结果
 </code></pre>]]></content>
     
     <summary type="html">
