@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-14T10:26:28.925Z</updated>
+  <updated>2017-10-14T10:27:41.991Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/14/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/14/代码高亮/</id>
     <published>2017-10-14T08:20:02.000Z</published>
-    <updated>2017-10-14T10:26:28.925Z</updated>
+    <updated>2017-10-14T10:27:41.991Z</updated>
     
-    <content type="html"><![CDATA[<p>总结<br>blog目录下config<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">highlight:</span> <span class="literal">true</span></div></pre></td></tr></table></figure><br>打开hexo默认高亮，则自定义高亮没用</p>
+    <content type="html"><![CDATA[<p>总结<br>blog目录下config<br><figure class="highlight yml"><figcaption><span>config配置</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">highlight:</span></div><div class="line"><span class="attr">    on:</span> <span class="literal">true</span></div></pre></td></tr></table></figure><br>打开hexo默认高亮，则自定义高亮没用</p>
 <p>但是关闭之后始终使用不了spfk主题的高亮设置，遂放弃，有空再搞</p>
 <p>下面是codeblock写法</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[<span class="number">20</span>][<span class="number">20</span>];</div></pre></td></tr></table></figure>
@@ -35,7 +35,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;总结&lt;br&gt;blog目录下config&lt;br&gt;&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;co
+      &lt;p&gt;总结&lt;br&gt;blog目录下config&lt;br&gt;&lt;figure class=&quot;highlight yml&quot;&gt;&lt;figcaption&gt;&lt;span&gt;config配置&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;di
     
     </summary>
     
