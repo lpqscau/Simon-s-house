@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-14T07:49:45.458Z</updated>
+  <updated>2017-10-14T07:56:25.998Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,16 +20,19 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/29/test/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/29/test/</id>
     <published>2017-09-29T14:58:33.000Z</published>
-    <updated>2017-10-14T07:49:45.458Z</updated>
+    <updated>2017-10-14T07:56:25.998Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="方法一：github链接"><a href="#方法一：github链接" class="headerlink" title="方法一：github链接"></a>方法一：github链接</h4><pre><code>&lt;img src=&quot;https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg&quot;&gt;
-</code></pre><p>效果如图,不行<br><br><img src="https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg"></p>
+    <content type="html"><![CDATA[<h4 id="方法一：github链接"><a href="#方法一：github链接" class="headerlink" title="方法一：github链接"></a>方法一：github链接</h4><pre><code class="html">&lt;img src=&quot;https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg&quot;&gt;
+</code></pre>
+<p>效果如图,不行<br><br><img src="https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg"></p>
 <h4 id="方法二-同样是github链接，但是用md语法"><a href="#方法二-同样是github链接，但是用md语法" class="headerlink" title="方法二 同样是github链接，但是用md语法"></a>方法二 同样是github链接，但是用md语法</h4><a id="more"></a>
-<pre><code>![](https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg)
-</code></pre><p>效果如图  ，也不行<br><br><br><img src="https://simonisacoder.github.io/img/icon.jpg" alt=""></p>
+<pre><code class="markdown">![](https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg)
+</code></pre>
+<p>效果如图  ，也不行<br><br><br><img src="https://simonisacoder.github.io/img/icon.jpg" alt=""></p>
 <p>两种方法都不行，还是hexo插件好</p>
-<h4 id="方法三-hexo插件"><a href="#方法三-hexo插件" class="headerlink" title="方法三 hexo插件"></a>方法三 hexo插件</h4><pre><code>{%asset_img icon.jpg%})
-</code></pre><p>前提：博客配置文件config.yml下面选true</p>
+<h4 id="方法三-hexo插件"><a href="#方法三-hexo插件" class="headerlink" title="方法三 hexo插件"></a>方法三 hexo插件</h4><pre><code class="markdown">{%asset_img icon.jpg%})
+</code></pre>
+<p>前提：博客配置文件config.yml下面选true</p>
 <pre><code>post_asset_folder: true
 </code></pre><p>文件目录</p>
 <pre><code>--post
@@ -40,8 +43,9 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;方法一：github链接&quot;&gt;&lt;a href=&quot;#方法一：github链接&quot; class=&quot;headerlink&quot; title=&quot;方法一：github链接&quot;&gt;&lt;/a&gt;方法一：github链接&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;效果如图,不行&lt;/br&gt;&lt;br&gt;&lt;img src=&quot;https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg&quot;&gt;&lt;/p&gt;
+      &lt;h4 id=&quot;方法一：github链接&quot;&gt;&lt;a href=&quot;#方法一：github链接&quot; class=&quot;headerlink&quot; title=&quot;方法一：github链接&quot;&gt;&lt;/a&gt;方法一：github链接&lt;/h4&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;img src=&amp;quot;https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如图,不行&lt;/br&gt;&lt;br&gt;&lt;img src=&quot;https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg&quot;&gt;&lt;/p&gt;
 &lt;h4 id=&quot;方法二-同样是github链接，但是用md语法&quot;&gt;&lt;a href=&quot;#方法二-同样是github链接，但是用md语法&quot; class=&quot;headerlink&quot; title=&quot;方法二 同样是github链接，但是用md语法&quot;&gt;&lt;/a&gt;方法二 同样是github链接，但是用md语法&lt;/h4&gt;
     
     </summary>
