@@ -3,33 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>KNN算法及python问题 | Simon-s-house</title>
+  <title>Hello World | Simon-s-house</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="机器学习实战之KNN创造数据集from numpy import *
-import operator
-def createDataSet():
-    group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
-    labels = [&amp;#39;A&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;B&amp;#39;]
-return gro">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
 <meta property="og:type" content="article">
-<meta property="og:title" content="KNN算法及python问题">
-<meta property="og:url" content="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/08/KNN算法及python小试“/index.html">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/20/hello-world/index.html">
 <meta property="og:site_name" content="Simon-s-house">
-<meta property="og:description" content="机器学习实战之KNN创造数据集from numpy import *
-import operator
-def createDataSet():
-    group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
-    labels = [&amp;#39;A&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;B&amp;#39;]
-return gro">
-<meta property="og:updated_time" content="2017-09-08T05:11:24.935Z">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:updated_time" content="2017-03-04T12:18:48.161Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KNN算法及python问题">
-<meta name="twitter:description" content="机器学习实战之KNN创造数据集from numpy import *
-import operator
-def createDataSet():
-    group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
-    labels = [&amp;#39;A&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;B&amp;#39;]
-return gro">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
   
     <link rel="alternative" href="/atom.xml" title="Simon-s-house" type="application/atom+xml">
   
@@ -235,11 +223,11 @@ return gro">
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-KNN算法及python小试“" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/Simon-s-house/2017/09/08/KNN算法及python小试“/" class="article-date">
-      <time datetime="2017-09-07T17:22:04.000Z" itemprop="datePublished">2017-09-08</time>
+      <a href="/Simon-s-house/2017/09/20/hello-world/" class="article-date">
+      <time datetime="2017-09-20T02:03:42.655Z" itemprop="datePublished">2017-09-20</time>
 </a>
     </div>
   
@@ -252,7 +240,7 @@ return gro">
         
   
     <h1 class="article-title" itemprop="name">
-      KNN算法及python问题
+      Hello World
     </h1>
   
 
@@ -262,10 +250,6 @@ return gro">
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/machine-learning/">machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/python/">python</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -273,76 +257,20 @@ return gro">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="机器学习实战之KNN"><a href="#机器学习实战之KNN" class="headerlink" title="机器学习实战之KNN"></a>机器学习实战之KNN</h1><h2 id="创造数据集"><a href="#创造数据集" class="headerlink" title="创造数据集"></a>创造数据集</h2><pre><code>from numpy import *
-import operator
-def createDataSet():
-    group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
-    labels = [&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;B&#39;]
-return group,labels
-</code></pre><p>创造一个4*2的array，数值可理解为坐标，label就是对应分类<br><a id="more"></a></p>
-<h2 id="python时间"><a href="#python时间" class="headerlink" title="python时间"></a>python时间</h2><h3 id="tile"><a href="#tile" class="headerlink" title="tile"></a>tile</h3><p>tile的作用是把一个矩阵复制出一个新的矩阵，如A是一个矩阵</p>
-<pre><code>tile(A,1) = A
-tile（A,2,3)就是把A作为一个元素，复制成新的2*3的矩阵，每一个元素就是一个A
-</code></pre><h3 id="shape"><a href="#shape" class="headerlink" title="shape"></a>shape</h3><p>shape是获取矩阵的size的函数</p>
-<pre><code>A = [1,2,3;4,5,6;7,8,9]
-A.shape = (3,3)
-A.shape[0] = A.shape[1] = A.shape[2] = 3
-</code></pre><h3 id="argsort"><a href="#argsort" class="headerlink" title="argsort"></a>argsort</h3><p>argsort是一个排序后获取下标的函数</p>
-<pre><code>A = [5,4,3,1,2]
-B = A.argsort() = [3,4,2,1,0]
-</code></pre><h3 id="itemgetter"><a href="#itemgetter" class="headerlink" title="itemgetter"></a>itemgetter</h3><p>itemgetter是operator的一个函数</p>
-<pre><code>b=operator.itemgetter(n-1)
-b成为获取对象第n个元素的函数
-A = [1,2,3]
-b(A) = 2
-</code></pre><h3 id="axis"><a href="#axis" class="headerlink" title="axis"></a>axis</h3><p>axis是表示矩阵的行列的</p>
-<pre><code>a = [1,2,3; 4,5,6]
-axis默认为0，表示列
-a.sum() = 21
-a.sum(axis=0) = [5,7,9] 列求和
-a.sum(axis=1) = [6,15]  行求和
-</code></pre><h3 id="dict-get"><a href="#dict-get" class="headerlink" title="dict.get"></a>dict.get</h3><pre><code>python中的字典dict，获取对应值有两种方式
-1. key2 = dict[key1] ,但是假如字典不存在key1会发生错误
-2. key2 = dict.get(key1,default) 当不存在key1，返回默认值default
-</code></pre><h2 id="完整代码及注释"><a href="#完整代码及注释" class="headerlink" title="完整代码及注释"></a>完整代码及注释</h2><pre><code>py import *
-import operator
-
-def createDataSet():
-    group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
-    labels = [&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;B&#39;]
-    return group,labels
-#上面函数是根据已有的数据，创造数据集
-
-def classify0(inX,dataSet,labels,k):
-    #inX是待分类的数据，dataSet是已知的数据集，labels是已知数据集的分类，k是算法抽取的最相邻点的数量
-    dataSetSize = dataSet.shape[0]
-        #获取dataSet的点的个数
-    diffMat = tile(inX,(dataSetSize,1)) - dataSet
-        #tile函数把待分类点组成一个n维向量，再和原有数据集每个点作差
-        #相当于，得到(x-x1),(x-x2),(x-x3)···
-    sqDiffMat = diffMat ** 2
-        #(x-x1)^2 ···
-    sqDistances = sqDiffMat.sum(axis=1)
-        #各个维度的差的平方求和
-    distances = sqDistances ** 0.5
-        #和开方最终得到欧式距离
-    sortedDistIndicies = distances.argsort()
-        #根据求得的距离进行排序，并得到对应的数据集的下标
-    classCount = {}
-        #新建字典，放置距离小的数据的标签及其对应数量
-    for i in range(k):
-        #放置距离小的前K个点
-        voteIlabel = labels[sortedDistIndicies[i]]
-            #根据下标得到当前这个数据点的label
-        classCount[voteIlabel] = classCount.get(voteIlabel,0) + 1
-            #字典中label对应值+1
-    sortedClassCount = sorted(classCount.iteritems(),key=operator.itemgetter(1),reverse=True)
-        #根据字典的key2进行排序
-        sorted classCount
-    return sortedClassCount[0][0]
-        #排序产生的是一个列表，列表的元素是一个tuple
-        #返回出现最多的标签，也就是最终分类结果
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
 </code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
       
       
         <div class="page-reward">
@@ -387,13 +315,13 @@ def classify0(inX,dataSet,labels,k):
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/Simon-s-house/2017/09/08/KNN算法及python小试“/">KNN算法及python问题</a></p>
+        <p><span>本文标题:</span><a href="/Simon-s-house/2017/09/20/hello-world/">Hello World</a></p>
         <p><span>文章作者:</span><a href="/Simon-s-house/" title="访问 Simon 的个人博客">Simon</a></p>
-        <p><span>发布时间:</span>2017年09月08日 - 01时22分</p>
-        <p><span>最后更新:</span>2017年09月08日 - 13时11分</p>
+        <p><span>发布时间:</span>2017年09月20日 - 10时03分</p>
+        <p><span>最后更新:</span>2017年03月04日 - 20时18分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/Simon-s-house/2017/09/08/KNN算法及python小试“/" title="KNN算法及python问题">https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/09/08/KNN算法及python小试“/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/09/08/KNN算法及python小试“/　　作者: Simon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/Simon-s-house/2017/09/20/hello-world/" title="Hello World">https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/09/20/hello-world/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/09/20/hello-world/　　作者: Simon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/Simon-s-house/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -406,18 +334,18 @@ def classify0(inX,dataSet,labels,k):
 
 <nav id="article-nav">
   
-    <a href="/Simon-s-house/2017/09/20/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Simon-s-house/2017/09/29/test/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Hello World
+          test
         
       </div>
     </a>
   
   
-    <a href="/Simon-s-house/2017/09/06/新学期半段计划/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">新学期半段计划</div>
+    <a href="/Simon-s-house/2017/09/08/KNN算法及python小试“/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">KNN算法及python问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -428,7 +356,7 @@ def classify0(inX,dataSet,labels,k):
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#机器学习实战之KNN"><span class="toc-number">1.</span> <span class="toc-text">机器学习实战之KNN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创造数据集"><span class="toc-number">1.1.</span> <span class="toc-text">创造数据集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python时间"><span class="toc-number">1.2.</span> <span class="toc-text">python时间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tile"><span class="toc-number">1.2.1.</span> <span class="toc-text">tile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shape"><span class="toc-number">1.2.2.</span> <span class="toc-text">shape</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#argsort"><span class="toc-number">1.2.3.</span> <span class="toc-text">argsort</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#itemgetter"><span class="toc-number">1.2.4.</span> <span class="toc-text">itemgetter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#axis"><span class="toc-number">1.2.5.</span> <span class="toc-text">axis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dict-get"><span class="toc-number">1.2.6.</span> <span class="toc-text">dict.get</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完整代码及注释"><span class="toc-number">1.3.</span> <span class="toc-text">完整代码及注释</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -494,13 +422,13 @@ def classify0(inX,dataSet,labels,k):
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/Simon-s-house/2017/09/20/hello-world/" title="上一篇: Hello World">
+            <a href="/Simon-s-house/2017/09/29/test/" title="上一篇: test">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/Simon-s-house/2017/09/06/新学期半段计划/" title="下一篇: 新学期半段计划">
+            <a href="/Simon-s-house/2017/09/08/KNN算法及python小试“/" title="下一篇: KNN算法及python问题">
                 <i class="fa fa-angle-right"></i>
             </a>
         
