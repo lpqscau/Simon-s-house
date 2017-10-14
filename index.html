@@ -251,13 +251,22 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>test11<br>博客高亮设定为 true才行<br>终于成功了<br>但是修改不了高亮的配色<br>下面是codeblock写法</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[<span class="number">20</span>][<span class="number">20</span>];</div></pre></td></tr></table></figure>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;%codeblock lang:c%&#125;</div><div class="line">int a[<span class="string">20</span>][<span class="symbol">20</span>];</div><div class="line">&#123;%endcodeblock%&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">d = dict()</div><div class="line">a = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</div><div class="line">a.append(<span class="number">4</span>)</div></pre></td></tr></table></figure>
-<p>下面是md写法<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[<span class="number">20</span>][<span class="number">20</span>];</div></pre></td></tr></table></figure></p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">```c</div><div class="line">int a[<span class="number">20</span>][<span class="number">20</span>];</div><div class="line">```</div></pre></td></tr></table></figure>
-<p>end</p>
+        <p>test12<br>博客高亮设定为 true才行<br>终于成功了<br>但是修改不了高亮的配色<br>下面是codeblock写法</p>
+<pre><code>int a[20][20];</code></pre>
+<pre><code>{%codeblock lang:c%}
+int a[20][20];
+{%endcodeblock%}
+</code></pre><pre><code class="python">d = dict()
+a = [1 2 3]
+a.append(4)
+</code></pre>
+<p>下面是md写法</p>
+<pre><code class="c">int a[20][20];
+</code></pre>
+<pre><code>```c
+int a[20][20];
+```
+</code></pre><p>end</p>
 
       
       
