@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-14T03:02:55.641Z</updated>
+  <updated>2017-10-14T03:19:24.384Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -16,18 +16,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
+    <title>不使用图床</title>
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/29/test/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/29/test/</id>
     <published>2017-09-29T14:58:33.000Z</published>
-    <updated>2017-10-14T03:02:55.641Z</updated>
+    <updated>2017-10-14T03:19:24.384Z</updated>
     
-    <content type="html"><![CDATA[<p>1<br><img src="2017-09-test/icon.jpg" alt=""><br>2<br><img src="2017-09-test/icon.jpg"><br>3<br><br>4<br><img src="/Simon-s-house/2017/09/29/test/icon.jpg" alt="icon.jpg" title=""></p>
+    <content type="html"><![CDATA[<h4 id="方法一：github链接"><a href="#方法一：github链接" class="headerlink" title="方法一：github链接"></a>方法一：github链接</h4><pre><code>&lt;img src=&quot;https://simonisacoder.github.io/Simon-s-house/2017-09-test/icon.jpg&quot;&gt;
+</code></pre><p>效果如图<br><br><img src="https://simonisacoder.github.io/Simon-s-house/2017-09-test/icon.jpg"></p>
+<h4 id="方法二-同样是github链接，但是用md语法"><a href="#方法二-同样是github链接，但是用md语法" class="headerlink" title="方法二 同样是github链接，但是用md语法"></a>方法二 同样是github链接，但是用md语法</h4><p><code>![](https://simonisacoder.github.io/2017-09-test/icon.jpg)</code><br>效果如图<br><br><br><img src="https://simonisacoder.github.io/2017-09-test/icon.jpg" alt=""></p>
+<h4 id="方法三-hexo插件"><a href="#方法三-hexo插件" class="headerlink" title="方法三 hexo插件"></a>方法三 hexo插件</h4><p><code><img src="/Simon-s-house/2017/09/29/test/icon.jpg" alt="icon.jpg" title="">.jpg)</code></p>
+<p>文件目录</p>
+<pre><code>--post
+  --2017-09-test
+  --2017-09-test.md
+</code></pre><p>效果如图<br><img src="/Simon-s-house/2017/09/29/test/icon.jpg" alt="icon.jpg" title="">.jpg)</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;1&lt;br&gt;&lt;img src=&quot;2017-09-test/icon.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;2&lt;br&gt;&lt;img src=&quot;2017-09-test/icon.jpg&quot;&gt;&lt;br&gt;3&lt;br&gt;&lt;br&gt;4&lt;br&gt;&lt;img src=&quot;/Simon-s-house/2017/09
+      &lt;h4 id=&quot;方法一：github链接&quot;&gt;&lt;a href=&quot;#方法一：github链接&quot; class=&quot;headerlink&quot; title=&quot;方法一：github链接&quot;&gt;&lt;/a&gt;方法一：github链接&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;http
     
     </summary>
     
