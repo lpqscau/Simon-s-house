@@ -252,10 +252,11 @@
       
           
         <h4 id="方法一：github链接"><a href="#方法一：github链接" class="headerlink" title="方法一：github链接"></a>方法一：github链接</h4><pre><code>&lt;img src=&quot;https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg&quot;&gt;
-</code></pre><p>效果如图<br><br><img src="https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg"></p>
-<h4 id="方法二-同样是github链接，但是用md语法"><a href="#方法二-同样是github链接，但是用md语法" class="headerlink" title="方法二 同样是github链接，但是用md语法"></a>方法二 同样是github链接，但是用md语法</h4><pre><code>![](https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg)
-</code></pre><p>效果如图<br><br><br><img src="https://simonisacoder.github.io/img/icon.jpg" alt=""></p>
-<p>两种方法都超级麻烦</p>
+</code></pre><p>效果如图,不行<br><br><img src="https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg"></p>
+<h4 id="方法二-同样是github链接，但是用md语法"><a href="#方法二-同样是github链接，但是用md语法" class="headerlink" title="方法二 同样是github链接，但是用md语法"></a>方法二 同样是github链接，但是用md语法</h4><p>&lt;!–&gt;</p>
+<pre><code>![](https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg)
+</code></pre><p>效果如图  ，也不行<br><br><br><img src="https://simonisacoder.github.io/img/icon.jpg" alt=""></p>
+<p>两种方法都不行，还是hexo插件好</p>
 <h4 id="方法三-hexo插件"><a href="#方法三-hexo插件" class="headerlink" title="方法三 hexo插件"></a>方法三 hexo插件</h4><pre><code>{%asset_img icon.jpg%})
 </code></pre><p>前提：博客配置文件config.yml下面选true</p>
 <pre><code>post_asset_folder: true
