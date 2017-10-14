@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-14T09:26:09.929Z</updated>
+  <updated>2017-10-14T09:35:40.359Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/14/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/14/代码高亮/</id>
     <published>2017-10-14T08:20:02.000Z</published>
-    <updated>2017-10-14T09:26:09.929Z</updated>
+    <updated>2017-10-14T09:35:40.359Z</updated>
     
-    <content type="html"><![CDATA[<p>test7<br>终于成功了<br>下面是知乎说的写法</p>
+    <content type="html"><![CDATA[<p>test8<br>终于成功了<br>下面是codeblock写法</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[<span class="number">20</span>][<span class="number">20</span>];</div></pre></td></tr></table></figure>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;%codeblock lang:c%&#125;</div><div class="line">int a[<span class="string">20</span>][<span class="symbol">20</span>];</div><div class="line">&#123;%endcodeblock%&#125;</div></pre></td></tr></table></figure>
-<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">d = dict()</div><div class="line">a = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</div></pre></td></tr></table></figure>
 <p>下面是md写法<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[<span class="number">20</span>][<span class="number">20</span>];</div></pre></td></tr></table></figure></p>
 <figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">```c</div><div class="line">int a[<span class="number">20</span>][<span class="number">20</span>];</div><div class="line">```</div></pre></td></tr></table></figure>
 <p>end</p>
@@ -33,9 +33,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;test7&lt;br&gt;终于成功了&lt;br&gt;下面是知乎说的写法&lt;/p&gt;
-&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a[&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;][&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;];&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;%codeblock lang:c%&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;int a[&lt;span class=&quot;string&quot;&gt;20&lt;/span&gt;][&lt;span class=&quot;symbol&quot;&gt;20&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;%endcodeblock%&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;p&gt;test8&lt;br&gt;终于成功了&lt;br&gt;下面是codeblock写法&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;
     
     </summary>
     
