@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-14T09:03:15.402Z</updated>
+  <updated>2017-10-14T09:07:58.272Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/14/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/14/代码高亮/</id>
     <published>2017-10-14T08:20:02.000Z</published>
-    <updated>2017-10-14T09:03:15.402Z</updated>
+    <updated>2017-10-14T09:07:58.272Z</updated>
     
-    <content type="html"><![CDATA[<p>test3<br>下面是知乎说的写法</p>
+    <content type="html"><![CDATA[<p>test4<br>下面是知乎说的写法</p>
 <pre><code>int a[20][20];</code></pre>
 <pre><code>{%codeblock lang:c%}
 int a[20][20];
@@ -39,7 +39,7 @@ int a[20][20];
     
     <summary type="html">
     
-      &lt;p&gt;test3&lt;br&gt;下面是知乎说的写法&lt;/p&gt;
+      &lt;p&gt;test4&lt;br&gt;下面是知乎说的写法&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;int a[20][20];&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;{%codeblock lang:c%}
 int a[20][20];
