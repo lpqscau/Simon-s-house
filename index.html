@@ -146,7 +146,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/Simon-s-house/tags/blog/" style="font-size: 10px;">blog</a> <a href="/Simon-s-house/tags/debate/" style="font-size: 15px;">debate</a> <a href="/Simon-s-house/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/Simon-s-house/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/Simon-s-house/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/Simon-s-house/tags/program/" style="font-size: 20px;">program</a> <a href="/Simon-s-house/tags/python/" style="font-size: 10px;">python</a> <a href="/Simon-s-house/tags/test/" style="font-size: 10px;">test</a> <a href="/Simon-s-house/tags/随笔/" style="font-size: 10px;">随笔</a>
+                        <a href="/Simon-s-house/tags/blog/" style="font-size: 12.5px;">blog</a> <a href="/Simon-s-house/tags/css/" style="font-size: 10px;">css</a> <a href="/Simon-s-house/tags/debate/" style="font-size: 15px;">debate</a> <a href="/Simon-s-house/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/Simon-s-house/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/Simon-s-house/tags/program/" style="font-size: 20px;">program</a> <a href="/Simon-s-house/tags/test/" style="font-size: 10px;">test</a> <a href="/Simon-s-house/tags/随笔/" style="font-size: 10px;">随笔</a>
                     </div>
                 </section>
                 
@@ -223,6 +223,74 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-代码高亮" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/Simon-s-house/2017/10/14/代码高亮/" class="article-date">
+      <time datetime="2017-10-14T08:20:02.000Z" itemprop="datePublished">2017-10-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Simon-s-house/2017/10/14/代码高亮/">代码高亮</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>下面是知乎说的写法</p>
+<pre><code>int a[20][20];</code></pre>
+<pre><code class="markdown">{%codeblock c%}
+int a[20][20];
+{%endcodeblock%}
+</code></pre>
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/css/">css</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/Simon-s-house/2017/10/14/代码高亮/#more">read more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -340,75 +408,6 @@
       
 
       
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-KNN算法及python小试“" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/Simon-s-house/2017/09/08/KNN算法及python小试“/" class="article-date">
-      <time datetime="2017-09-07T17:22:04.000Z" itemprop="datePublished">2017-09-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Simon-s-house/2017/09/08/KNN算法及python小试“/">KNN算法及python问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="机器学习实战之KNN"><a href="#机器学习实战之KNN" class="headerlink" title="机器学习实战之KNN"></a>机器学习实战之KNN</h1><h2 id="创造数据集"><a href="#创造数据集" class="headerlink" title="创造数据集"></a>创造数据集</h2><pre><code>from numpy import *
-import operator
-def createDataSet():
-    group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
-    labels = [&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;B&#39;]
-return group,labels
-</code></pre><p>创造一个4*2的array，数值可理解为坐标，label就是对应分类<br>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/machine-learning/">machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/python/">python</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/Simon-s-house/2017/09/08/KNN算法及python小试“/#more">read more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
