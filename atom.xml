@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-14T09:16:10.314Z</updated>
+  <updated>2017-10-14T09:20:58.632Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,31 +20,22 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/14/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/14/代码高亮/</id>
     <published>2017-10-14T08:20:02.000Z</published>
-    <updated>2017-10-14T09:16:10.314Z</updated>
+    <updated>2017-10-14T09:20:58.632Z</updated>
     
-    <content type="html"><![CDATA[<p>test5<br>下面是知乎说的写法</p>
-<pre><code>int a[20][20];</code></pre>
-<pre><code>{%codeblock lang:c%}
-int a[20][20];
-{%endcodeblock%}
-</code></pre><a id="more"></a>
-<p>下面是md写法</p>
-<pre><code class="lang：c">int a[20][20];
-</code></pre>
-<pre><code>```lang：c
-int a[20][20];
-```
-</code></pre><p>end</p>
+    <content type="html"><![CDATA[<p>test6<br>下面是知乎说的写法</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[<span class="number">20</span>][<span class="number">20</span>];</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;%codeblock lang:c%&#125;</div><div class="line">int a[20][20];</div><div class="line">&#123;%endcodeblock%&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>下面是md写法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int a[20][20];</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">```lang：c</div><div class="line">int a[20][20];</div><div class="line">```</div></pre></td></tr></table></figure>
+<p>end</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;test5&lt;br&gt;下面是知乎说的写法&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;int a[20][20];&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;{%codeblock lang:c%}
-int a[20][20];
-{%endcodeblock%}
-&lt;/code&gt;&lt;/pre&gt;
+      &lt;p&gt;test6&lt;br&gt;下面是知乎说的写法&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a[&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;][&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;];&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;%codeblock lang:c%&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;int a[20][20];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;%endcodeblock%&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
