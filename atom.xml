@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-17T01:18:21.902Z</updated>
+  <updated>2017-10-17T01:25:42.730Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/17/github%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/17/github基础操作/</id>
     <published>2017-10-16T16:58:00.000Z</published>
-    <updated>2017-10-17T01:18:21.902Z</updated>
+    <updated>2017-10-17T01:25:42.730Z</updated>
     
     <content type="html"><![CDATA[<h3 id="SSH基础知识"><a href="#SSH基础知识" class="headerlink" title="SSH基础知识"></a>SSH基础知识</h3><blockquote>
 <p>简单说，SSH是一种网络协议，用于计算机之间的加密登录。<br>如果一个用户从本地计算机，使用SSH协议登录另一台远程计算机，我们就可以认为，这种登录是安全的，即使被中途截获，密码也不会泄露。<br>最早的时候，互联网通信都是明文通信，一旦被截获，内容就暴露无疑。1995年，芬兰学者Tatu Ylonen设计了SSH协议，将登录信息全部加密，成为互联网安全的一个基本解决方案，迅速在全世界获得推广，目前已经成为Linux系统的标准配置。<br>需要指出的是，SSH只是一种协议，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。<br>　　对于github而言，ssh-key主要是用来确保当前IP（host）是否有权限对远程仓库进行操作，无论是push还是pull。</p>
@@ -35,7 +35,7 @@
 <p><code>ssh -T url</code>测试ssh是否连通了</p>
 <h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><h4 id="连接远程库"><a href="#连接远程库" class="headerlink" title="连接远程库"></a>连接远程库</h4><p><code>git remote add 自定义id 库的url</code><br>上面的名字你随意写，库的url可以是https或者ssh格式，但是ssh格式，需要你添加ssh-key</p>
 <p><code>git remote -v</code>查看已经绑定的远程库<br><code>git remote rename old_id new_id</code> 重命名远程库<br><code>git remote remove id</code>解除连接远程库</p>
-<h4 id="branch操作"><a href="#branch操作" class="headerlink" title="branch操作"></a>branch操作</h4><p>如果是克隆下来的库，有master分支，没问题<br>如果是init的库本地库，一开始没有master分支，需要先add文件（夹），自动生成master分支之后才可以新建分支<br><code>git branch</code>查看本地分支<br><code>git branch id</code>新建本地分支<br><code>git checkout branc_id</code>切换本地分支，尤其是当你要add file的时候，记住先切换到你想要的分支</p>
+<h4 id="branch操作"><a href="#branch操作" class="headerlink" title="branch操作"></a>branch操作</h4><p>如果是克隆下来的库，有master分支，没问题<br>如果是init的库本地库，一开始没有master分支，需要先add文件（夹），自动生成master分支之后才可以新建分支<br><code>git branch</code>查看本地分支<br><code>git branch id</code>新建本地分支<br><code>git checkout branc_id</code>切换本地分支，尤其是当你要add file的时候，记住先切换到你想要的分支<br><img src="/Simon-s-house/2017/10/17/github基础操作/1.png" alt="1.png" title=""><br>上图就是切换branch后的效果，当前branch会高亮</p>
 <h4 id="push操作"><a href="#push操作" class="headerlink" title="push操作"></a>push操作</h4><p><code>git push repo_id local_branch:remote_branch</code><br>repo_id是你自定义的库id<br>把remote_branch没有的话会自动新建<br>本地的branch其实就是不同文件夹</p>
 <h4 id="pull操作"><a href="#pull操作" class="headerlink" title="pull操作"></a>pull操作</h4><p><code>git pull repo_id remote_bracn</code><br>可以把repo_id对应分支pull下来，已经pull过的会自动更新</p>
 ]]></content>
