@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-17T01:25:42.730Z</updated>
+  <updated>2017-10-17T01:41:00.497Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/17/github%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/17/github基础操作/</id>
     <published>2017-10-16T16:58:00.000Z</published>
-    <updated>2017-10-17T01:25:42.730Z</updated>
+    <updated>2017-10-17T01:41:00.497Z</updated>
     
     <content type="html"><![CDATA[<h3 id="SSH基础知识"><a href="#SSH基础知识" class="headerlink" title="SSH基础知识"></a>SSH基础知识</h3><blockquote>
 <p>简单说，SSH是一种网络协议，用于计算机之间的加密登录。<br>如果一个用户从本地计算机，使用SSH协议登录另一台远程计算机，我们就可以认为，这种登录是安全的，即使被中途截获，密码也不会泄露。<br>最早的时候，互联网通信都是明文通信，一旦被截获，内容就暴露无疑。1995年，芬兰学者Tatu Ylonen设计了SSH协议，将登录信息全部加密，成为互联网安全的一个基本解决方案，迅速在全世界获得推广，目前已经成为Linux系统的标准配置。<br>需要指出的是，SSH只是一种协议，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。<br>　　对于github而言，ssh-key主要是用来确保当前IP（host）是否有权限对远程仓库进行操作，无论是push还是pull。</p>
@@ -28,12 +28,13 @@
 <p><a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html" target="_blank" rel="external">ssh入门贴</a></p>
 <a id="more"></a>
 <h4 id="ssh-key管理"><a href="#ssh-key管理" class="headerlink" title="ssh-key管理"></a>ssh-key管理</h4><p>如果我们想用多台电脑来对同一个库进行操作，就应该在不同电脑上生成不同的ssh—key添加到库里面去。</p>
-<p>生成ssh-key命令<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"你的邮箱"</span></div></pre></td></tr></table></figure></p>
+<h4 id="ssh相关命令"><a href="#ssh相关命令" class="headerlink" title="ssh相关命令"></a>ssh相关命令</h4><p>生成ssh-key命令<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"你的邮箱"</span></div></pre></td></tr></table></figure></p>
 <p>这时候会弹出来<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Enter <span class="built_in">file</span> <span class="keyword">in</span> which <span class="keyword">the</span> key <span class="keyword">is</span> (/home/simon/.ssh/id_rsa):</div><div class="line">你想新建的文件名</div></pre></td></tr></table></figure></p>
 <p>如果之前没有生成过ssh-key，按回车就好，ssh-key就在这个目录<br>如果之前已经生成过，而且不想覆盖，就输入文件名，它会在这个目录创建你输入的文件，然后把新的ssh-key存进去，像下面<br><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">-home</span></div><div class="line">  -<span class="ruby">-Simon</span></div><div class="line">    -<span class="ruby">-.ssh</span></div><div class="line">      -<span class="ruby">-第一个ssh-key</span></div><div class="line">      -<span class="ruby">-你输入的文件名</span></div><div class="line">        -<span class="ruby">-第二个ssh-key</span></div></pre></td></tr></table></figure></p>
 <p>对了，所有的ssh-key文件名都是<br><code>id_rsa.pub</code><br>忘记ssh-key在哪里的时候’ssh-keygen’ 就可以看到目录了，但是不要重新新建一个哦！</p>
 <p><code>ssh -T url</code>测试ssh是否连通了</p>
-<h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><h4 id="连接远程库"><a href="#连接远程库" class="headerlink" title="连接远程库"></a>连接远程库</h4><p><code>git remote add 自定义id 库的url</code><br>上面的名字你随意写，库的url可以是https或者ssh格式，但是ssh格式，需要你添加ssh-key</p>
+<h4 id="ssh-key和github的deploy-key的绑定"><a href="#ssh-key和github的deploy-key的绑定" class="headerlink" title="ssh-key和github的deploy key的绑定"></a>ssh-key和github的deploy key的绑定</h4><p>原来github的deploy_key分账号的deploy-key和库的deploy-key，为了方便，当然是直接设置账号deploy-key啊，这样对每个库都有权限，而且每个本地的ssh-key只能绑定一次（无论是库还是账号）。<br>这里有个大坑，虽然账号的deploy-key已经绑定了本地的ssh-key，但是手残把多新建一个ssh-key然后绑定了一个库，然后之后所有其它库都需要另外的ssh-key才能使用ssh协议，但是这样贼麻烦，弄了好久，发现只要把所有库的deploy-key都去掉就行，反正现在没有多人协同开发，不管了。</p>
+<h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><h4 id="连接远程库"><a href="#连接远程库" class="headerlink" title="连接远程库"></a>连接远程库</h4><p><code>git remote add 自定义id 库的url</code><br>上面的名字你随意写，库的url可以是https或者ssh格式，但是ssh格式，需要你添加ssh-key</p>
 <p><code>git remote -v</code>查看已经绑定的远程库<br><code>git remote rename old_id new_id</code> 重命名远程库<br><code>git remote remove id</code>解除连接远程库</p>
 <h4 id="branch操作"><a href="#branch操作" class="headerlink" title="branch操作"></a>branch操作</h4><p>如果是克隆下来的库，有master分支，没问题<br>如果是init的库本地库，一开始没有master分支，需要先add文件（夹），自动生成master分支之后才可以新建分支<br><code>git branch</code>查看本地分支<br><code>git branch id</code>新建本地分支<br><code>git checkout branc_id</code>切换本地分支，尤其是当你要add file的时候，记住先切换到你想要的分支<br><img src="/Simon-s-house/2017/10/17/github基础操作/1.png" alt="1.png" title=""><br>上图就是切换branch后的效果，当前branch会高亮</p>
 <h4 id="push操作"><a href="#push操作" class="headerlink" title="push操作"></a>push操作</h4><p><code>git push repo_id local_branch:remote_branch</code><br>repo_id是你自定义的库id<br>把remote_branch没有的话会自动新建<br>本地的branch其实就是不同文件夹</p>
@@ -95,7 +96,7 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/29/test/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/29/test/</id>
     <published>2017-09-29T14:58:33.000Z</published>
-    <updated>2017-10-14T07:57:53.376Z</updated>
+    <updated>2017-10-17T01:28:37.312Z</updated>
     
     <content type="html"><![CDATA[<h4 id="方法一：github链接"><a href="#方法一：github链接" class="headerlink" title="方法一：github链接"></a>方法一：github链接</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg"</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>效果如图,不行<br><br><img src="https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg"></p>
@@ -106,7 +107,7 @@
 <h4 id="方法三-hexo插件"><a href="#方法三-hexo插件" class="headerlink" title="方法三 hexo插件"></a>方法三 hexo插件</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;%asset_img icon.jpg%&#125;)</div></pre></td></tr></table></figure>
 <p>前提：博客配置文件config.yml下面选true<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></div></pre></td></tr></table></figure></p>
 <p>文件目录<br><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">-post</span></div><div class="line">  -<span class="ruby">-<span class="number">2017</span>-09-test</span></div><div class="line">  -<span class="ruby">-<span class="number">2017</span>-09-test.md</span></div></pre></td></tr></table></figure></p>
-<p>效果如图<br><img src="/Simon-s-house/2017/09/29/test/icon.jpg" alt="icon.jpg" title="">)</p>
+<p>效果如图<br><img src="/Simon-s-house/2017/09/29/test/icon.jpg" alt="icon.jpg" title=""></p>
 ]]></content>
     
     <summary type="html">
