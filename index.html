@@ -251,25 +251,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="感知机算法-PLA-Proceptron-Learning-Algorithm"><a href="#感知机算法-PLA-Proceptron-Learning-Algorithm" class="headerlink" title="感知机算法-PLA-Proceptron Learning Algorithm"></a>感知机算法-PLA-Proceptron Learning Algorithm</h3><p>感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行</p>
-<p>先得到n个输入，再将每个输入值加权，然后判断感知器输入的加权和最否达到某一阀值v，若达到，则通过sign函数输出1，否则输出-1。</p>
-<p><img src="http://images0.cnblogs.com/blog2015/680781/201508/012141117983823.jpg" alt="img"></p>
-<p>上面的公式可知，当权值向量确定时，就可以利用感知器来做分类。</p>
-<h4 id="特征向量和增广向量"><a href="#特征向量和增广向量" class="headerlink" title="特征向量和增广向量"></a>特征向量和增广向量</h4><p>假设数据a=[x1,x2],则对应的w=[w1,w2],记阈值（threshold)为v</p>
-<p>假设w=[w1,w2]</p>
-<p>我们的判别方式是sign ($w^t$*a) &gt; v</p>
-<p>为了计算方便，我们不妨记增广向量$a^`$ =[x0,x1,x2]=[1,x1,x2] (x0恒为1，事实上x0是常数就ok)</p>
-<p>则$w^`$ =[w0,w1,w2]</p>
-<p>则$w^<code>t$*$a^</code>$  = w0x0+w1x1+w2x2 = w0+w1x1+w2x2 = w0 + $w^t$a</p>
-<p>那么我们如何获得感知器的权值呢？这需要根据训练集是否可分来采用不同的方法：</p>
-<p>1、训练集线性可分时 –&gt; 感知器训练法则</p>
-<p>　　为了得到可接受的权值，通常从随机的权值开始，然后利用训练集反复训练权值，最后得到能够正确分类所有样例的权向量。</p>
-<p>具体算法过程如下：</p>
-<p>A）初始化权向量w=(w0,w1,…,wn)，将权向量的每个值赋一个随机值。</p>
-<p>B）对于每个训练样例，首先计算其预测输出：</p>
-<p>$lim_{x\to \infty} \ exp(-x)=0$</p>
-<p>$lim_{x \to \infty} \ exp(-x)=0$</p>
-
+              <h3 id="感知机算法-PLA-Proceptron-Learning-Algorithm"><a href="#感知机算法-PLA-Proceptron-Learning-Algorithm" class="headerlink" title="感知机算法-PLA-Proceptron Learning Algorithm"></a>感知机算法-PLA-Proceptron Learning Algorithm</h3><p>感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行</p>
+          
       
       
     </div>
@@ -283,6 +266,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/machine-learning/">machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/program/">program</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/Simon-s-house/2017/10/18/感知机算法/#more">read more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
