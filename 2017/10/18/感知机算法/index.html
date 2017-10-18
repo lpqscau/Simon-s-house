@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="Simon-s-house">
 <meta property="og:description" content="感知机算法-PLA-Proceptron Learning Algorithm感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行">
 <meta property="og:image" content="http://images0.cnblogs.com/blog2015/680781/201508/012141117983823.jpg">
-<meta property="og:updated_time" content="2017-10-18T09:56:52.189Z">
+<meta property="og:updated_time" content="2017-10-18T11:02:09.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="感知机算法">
 <meta name="twitter:description" content="感知机算法-PLA-Proceptron Learning Algorithm感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行">
@@ -264,7 +264,7 @@
 <a id="more"></a>
 <p>先得到n个输入，再将每个输入值加权，然后判断感知器输入的加权和最否达到某一阀值v，若达到，则通过sign函数输出1，否则输出-1。</p>
 <p><img src="http://images0.cnblogs.com/blog2015/680781/201508/012141117983823.jpg" alt="img"></p>
-<p>上面的公式可知，当权值向量确定时，就可以利用感知器来做分类。</p>
+<p>上面的公式可知，当权值向量w确定时，就可以利用感知器来做分类。</p>
 <h4 id="特征向量和增广向量"><a href="#特征向量和增广向量" class="headerlink" title="特征向量和增广向量"></a>特征向量和增广向量</h4><p>假设数据a=[x1,x2],则对应的w=[w1,w2],记阈值（threshold)为v</p>
 <p>假设w=[w1,w2]</p>
 <p>我们的判别方式是sign ($w^t$*a) &gt; v</p>
@@ -272,12 +272,12 @@
 <p>则$w^`$ =[w0,w1,w2]</p>
 <p>则$w^<code>t$*$a^</code>$  = w0x0+w1x1+w2x2 = w0+w1x1+w2x2 = w0 + $w^t$a</p>
 <p>那么我们如何获得感知器的权值呢？这需要根据训练集是否可分来采用不同的方法：</p>
-<p>1、训练集线性可分时 –&gt; 感知器训练法则</p>
+<p>1、训练集线性可分时 —&gt; 感知器训练法则</p>
 <p>　　为了得到可接受的权值，通常从随机的权值开始，然后利用训练集反复训练权值，最后得到能够正确分类所有样例的权向量。</p>
 <p>具体算法过程如下：</p>
 <p>A）初始化权向量w=(w0,w1,…,wn)，将权向量的每个值赋一个随机值。</p>
 <p>B）对于每个训练样例，首先计算其预测输出：</p>
-<p>$lim_{x\to \infty} \ exp(-x)=0$</p>
+<p>&lt;/code&gt;$lim_{x\to \infty} \ exp(-x)=0$</p>
 <p>$lim_{x \to \infty} \ exp(-x)=0$</p>
 
       
@@ -327,7 +327,7 @@
         <p><span>本文标题:</span><a href="/Simon-s-house/2017/10/18/感知机算法/">感知机算法</a></p>
         <p><span>文章作者:</span><a href="/Simon-s-house/" title="访问 Simon 的个人博客">Simon</a></p>
         <p><span>发布时间:</span>2017年10月18日 - 17时10分</p>
-        <p><span>最后更新:</span>2017年10月18日 - 17时56分</p>
+        <p><span>最后更新:</span>2017年10月18日 - 19时02分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/Simon-s-house/2017/10/18/感知机算法/" title="感知机算法">https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/10/18/感知机算法/</a>
             <span class="copy-path" data-clipboard-text="原文: https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/10/18/感知机算法/　　作者: Simon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -431,7 +431,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/18/感知机算法/">感知机算法</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/18/uppal/">uppal</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/17/github基础操作/">github基础操作</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/14/代码高亮/">代码高亮</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/09/29/test/">不使用图床博客po图片</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/09/08/KNN算法及python小试“/">KNN算法及python问题</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/09/06/新学期半段计划/">新学期半段计划</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/05/14/atom捣鼓/">atom捣鼓</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/04/08/小议言论自由/">小议言论自由</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/28/ICUT/">ICUT</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/14/markdown-pad/">markdown pad</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/07/motion-analysis-of-CCC/">motion analysis of CCC</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/06/markdown-learning/">markdown learning</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/06/markdown进阶/">markdown进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/05/I-am-tired-of-building-this/">I am tired of building this!</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/05/Simon-is-very-angry/">Simon is very angry!</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/05/Simon-s-new-personal-blog/">Simon's new personal blog</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/04/Simon-s-personal-blog/">Simon's personal blog</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/18/感知机算法/">感知机算法</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/18/uppal/">uppal</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/17/github基础操作/">github基础操作</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/14/代码高亮/">代码高亮</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/09/29/test/">不使用图床博客po图片</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/09/08/KNN算法及python小试“/">KNN算法及python问题</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/09/06/新学期半段计划/">新学期半段计划</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/05/14/atom捣鼓/">atom捣鼓</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/04/08/小议言论自由/">小议言论自由</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/28/ICUT/">ICUT</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/14/markdown-pad/">markdown pad</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/07/motion-analysis-of-CCC/">motion analysis of CCC</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/06/markdown进阶/">markdown进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/06/markdown-learning/">markdown learning</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/05/I-am-tired-of-building-this/">I am tired of building this!</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/05/Simon-is-very-angry/">Simon is very angry!</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/05/Simon-s-new-personal-blog/">Simon's new personal blog</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/04/Simon-s-personal-blog/">Simon's personal blog</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");

@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-18T09:56:52.189Z</updated>
+  <updated>2017-10-18T11:02:09.893Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/%E6%84%9F%E7%9F%A5%E6%9C%BA%E7%AE%97%E6%B3%95/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/感知机算法/</id>
     <published>2017-10-18T09:10:06.000Z</published>
-    <updated>2017-10-18T09:56:52.189Z</updated>
+    <updated>2017-10-18T11:02:09.893Z</updated>
     
     <content type="html"><![CDATA[<h3 id="感知机算法-PLA-Proceptron-Learning-Algorithm"><a href="#感知机算法-PLA-Proceptron-Learning-Algorithm" class="headerlink" title="感知机算法-PLA-Proceptron Learning Algorithm"></a>感知机算法-PLA-Proceptron Learning Algorithm</h3><p>感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行</p>
 <a id="more"></a>
 <p>先得到n个输入，再将每个输入值加权，然后判断感知器输入的加权和最否达到某一阀值v，若达到，则通过sign函数输出1，否则输出-1。</p>
 <p><img src="http://images0.cnblogs.com/blog2015/680781/201508/012141117983823.jpg" alt="img"></p>
-<p>上面的公式可知，当权值向量确定时，就可以利用感知器来做分类。</p>
+<p>上面的公式可知，当权值向量w确定时，就可以利用感知器来做分类。</p>
 <h4 id="特征向量和增广向量"><a href="#特征向量和增广向量" class="headerlink" title="特征向量和增广向量"></a>特征向量和增广向量</h4><p>假设数据a=[x1,x2],则对应的w=[w1,w2],记阈值（threshold)为v</p>
 <p>假设w=[w1,w2]</p>
 <p>我们的判别方式是sign ($w^t$*a) &gt; v</p>
@@ -34,12 +34,12 @@
 <p>则$w^`$ =[w0,w1,w2]</p>
 <p>则$w^<code>t$*$a^</code>$  = w0x0+w1x1+w2x2 = w0+w1x1+w2x2 = w0 + $w^t$a</p>
 <p>那么我们如何获得感知器的权值呢？这需要根据训练集是否可分来采用不同的方法：</p>
-<p>1、训练集线性可分时 –&gt; 感知器训练法则</p>
+<p>1、训练集线性可分时 —&gt; 感知器训练法则</p>
 <p>　　为了得到可接受的权值，通常从随机的权值开始，然后利用训练集反复训练权值，最后得到能够正确分类所有样例的权向量。</p>
 <p>具体算法过程如下：</p>
 <p>A）初始化权向量w=(w0,w1,…,wn)，将权向量的每个值赋一个随机值。</p>
 <p>B）对于每个训练样例，首先计算其预测输出：</p>
-<p>$lim_{x\to \infty} \ exp(-x)=0$</p>
+<p>&lt;/code&gt;$lim_{x\to \infty} \ exp(-x)=0$</p>
 <p>$lim_{x \to \infty} \ exp(-x)=0$</p>
 ]]></content>
     
@@ -195,10 +195,10 @@
     <updated>2017-10-17T01:28:37.312Z</updated>
     
     <content type="html"><![CDATA[<h4 id="方法一：github链接"><a href="#方法一：github链接" class="headerlink" title="方法一：github链接"></a>方法一：github链接</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg"</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>效果如图,不行<br><br><img src="https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg"></p>
+<p>效果如图,不行&lt;/br&gt;<br><img src="https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg"></p>
 <h4 id="方法二-同样是github链接，但是用md语法"><a href="#方法二-同样是github链接，但是用md语法" class="headerlink" title="方法二 同样是github链接，但是用md语法"></a>方法二 同样是github链接，但是用md语法</h4><a id="more"></a>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![](https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg)</div></pre></td></tr></table></figure>
-<p>效果如图  ，也不行<br><br><br><img src="https://simonisacoder.github.io/img/icon.jpg" alt=""></p>
+<p>效果如图  ，也不行<br>&lt;/br&gt;<br><img src="https://simonisacoder.github.io/img/icon.jpg" alt=""></p>
 <p>两种方法都不行，还是hexo插件好</p>
 <h4 id="方法三-hexo插件"><a href="#方法三-hexo插件" class="headerlink" title="方法三 hexo插件"></a>方法三 hexo插件</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;%asset_img icon.jpg%&#125;)</div></pre></td></tr></table></figure>
 <p>前提：博客配置文件config.yml下面选true<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></div></pre></td></tr></table></figure></p>
@@ -209,7 +209,7 @@
     <summary type="html">
     
       &lt;h4 id=&quot;方法一：github链接&quot;&gt;&lt;a href=&quot;#方法一：github链接&quot; class=&quot;headerlink&quot; title=&quot;方法一：github链接&quot;&gt;&lt;/a&gt;方法一：github链接&lt;/h4&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;效果如图,不行&lt;/br&gt;&lt;br&gt;&lt;img src=&quot;https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;效果如图,不行&amp;lt;/br&amp;gt;&lt;br&gt;&lt;img src=&quot;https://github.com/simonisacoder/Simon-s-house/tree/master/img/icon.jpg&quot;&gt;&lt;/p&gt;
 &lt;h4 id=&quot;方法二-同样是github链接，但是用md语法&quot;&gt;&lt;a href=&quot;#方法二-同样是github链接，但是用md语法&quot; class=&quot;headerlink&quot; title=&quot;方法二 同样是github链接，但是用md语法&quot;&gt;&lt;/a&gt;方法二 同样是github链接，但是用md语法&lt;/h4&gt;
     
     </summary>
@@ -337,9 +337,9 @@
     </summary>
     
     
-      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/essay/"/>
-    
       <category term="debate" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/debate/"/>
+    
+      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/essay/"/>
     
   </entry>
   
@@ -388,7 +388,7 @@
 ( I didn’t realize the key point “China” until the debate finished. ~wu~wu~)<br>①According to feedback, we failed to answer the question that what’s the difference between top U &amp; non-top U and this makes the opp side keep attacking us that it will definitely cause inequality that those who want to study humanity subjects need to pay more effort than those who want to study STEM.<br>Solution: I just come up with an idea to rebut about the equality or fairness problem. I suddenly find out that it our policy doesn’t violate the fair principle because that fairness means that if people want to get the same interest, they need to pay the same cost regardless of their background or something else. But in the case, people want to learn STEM and people want to learn humanity have different goals and are chasing for different interests. To give an example, when the private schools increase their prices, is it unfair for those intend to study in private schools? The truth is that they are enjoying different services, and it is fair enough for them to pay different costs. The only differences is that the different cost now expands. And that’s we want to do, by expanding the cost difference, to encourage more students to study STEM and make more contribution to our country.</li>
 </ol>
 <p>②The opp side put forward an argument that an important mission of U is to teach students think about some ultimate question, who am I, where are we from, What is the meaning of life and so on, helping them develop fully instead of focus on some practical courses. And they think only humanity courses help students think about those question. Actually, I did react to this argument and rebut that to achieve full-development is not so to do with the courses the U set. Students are supposed to participate in more social activities or associations for the reason that it is those extracurricular activities help a student develop more fully instead of the courses set by U. From the judge’s perspective, my rebuttal only answers the second level of the question. And after the feedback, I was considering that what was the meaning of second level. Also, it was my first time to hear a judge analyzing an argument from different levels.<br>Self-reflection: Now I get it that the second level means that my rebuttal only explain how the U helps students achieve integrated development. But the first level is that whether U should teach students to think about those ultimate questions. Normally, when we want to do some things, the correct logic is: what is the “thing” -&gt; why we should do it -&gt; how to do it. So to give a more convincing rebuttal, I’d better admit that teaching students to think about those question is beneficial. But the fact is that not only those humanity courses help people to think about it but those STEM courses also help a lot. Physics helps us to figure out the question where are we from, astronomy makes us realize how tiny are we in the universe and makes us try to think about the status and role of human in the universe. Biology helps us know about the subtlety of creature and life, making us treasure our life. (But I still think it is not convincing enough because all subjects have their own unique function, meaning and significance which are irreplaceable).<br>③One of my argument is that the major contradiction we are facing is that the productive force is inconsistent with the productive relation. And the fact is that STEM courses favor improving our productive force a lot while those humanity subjects help adjust the productive relation. But I think I failed to prove that after we do that, our economy will develop enough and the major contradiction existing will be solved and finally achieve communism. That is our ultimate goal and at that time, people will not be bound from labor, making it possible to learn or do whatever they want or interested in.<br>So the policy is for a long-term consideration. So it seems that the judge didn’t buy my point. Another reason that the judge didn’t agree this point is that in our country, we also need a lot of lawyers who are considered people adjusting productive relation. And I failed to react to this. Now I am considering that, maybe I can explain that a considerable number of lawyers are dealing with some social problems which are exactly caused by the poor economy. So increasing the number of lawyers is just a palliative. And our policy is the cure.</p>
-<pre><code>④ One argument raised up by my partner is that students majored in STEM have great advantage on jog hunting. So our policy helps students adapt to the market and meet the current need of market which is not only beneficial to individual but also the whole society. Anyway, the opp side point out that our policy will only worsen the situation because if all students go to study STEM, it will just cause an occupation jam because the number of graduate increase a lot while the need of market remains which do harm to the graduates. And I didn’t do a good job to protect it. I explain that the gov will have many other corresponding policies, such as encourage industry and scientific research to employ those graduates. But it seemed not so convincing. 
+<pre><code>    ④ One argument raised up by my partner is that students majored in STEM have great advantage on jog hunting. So our policy helps students adapt to the market and meet the current need of market which is not only beneficial to individual but also the whole society. Anyway, the opp side point out that our policy will only worsen the situation because if all students go to study STEM, it will just cause an occupation jam because the number of graduate increase a lot while the need of market remains which do harm to the graduates. And I didn’t do a good job to protect it. I explain that the gov will have many other corresponding policies, such as encourage industry and scientific research to employ those graduates. But it seemed not so convincing. 
 </code></pre><p>Motion 2. THW abolish all patent.<br>It was not only our first time to rank 1st but rank 1st as the lower house. From the judge’s feedback, he thought that we raised up a very important point about the time gap which means there is a time gap from an innovation appearing to it is copied. The time gap actually helps protect the innovator’s interest. The judge thought this point push the whole debate to a new angle.<br>But looking back at the debate, I think my argumentation can be promoted a lot.<br>①My partner raised up a new argument that knowledge is the property of the whole human and patent, as a kind of useful and beneficial knowledge even deserve more spreading. But the existence of patent actually hampers its spreading. Actually the upper house has already presented a similar opinion that it stops further innovation because anyone else want to promote it need to pay for the patent. So the best way for us to improve the argument is to consider this problem from the original innovator’s perspective. So I pointed out that patent not only do harm to other innovators but the original innovator himself. First, patent helps the innovator grasp the unique use of the innovation and make him make profit from if continuously which will reduce innovator’s incentive to improve or renovate his innovation. Because laziness is the nature of human being, since I can keep gaining profit from it, why do I bother myself to renovate it?  So the existence of patent brings an illusion to the innovator that he can forever enjoy the profit. But the market is fierce, when he is content with the status quo, others are still trying to invent something more advanced to seize the market and once they succeed, those original innovators’ dreams break. Anyway it’s too late to react when their products are already replaced in the market. So from a long term consideration, patent does not protect the innovator’s interest. Second, I pointed out that patent is not the best way to protect innovator’s interest. There are many cases that some company copy others’ patent and with better marketing strategy, they successfully seize the market and gain great profit from it. But their illegal cost which pay to the innovator is part of their interest. So combined with the time gap theory, we put forward a new solution that those innovators need to make full use of the time gap and cooperate with industrial field and seize the market in advance. Also, without the protection of patent, if they want to maintain their market shares, they need to keep doing further renovation to improve the competiveness of their products, eg higher quality, lower cost, more efficient productive way and so on. And these two aspect actually give rebuttal to the opp side who brings up that patent give more motivation and finance to the innovators. (I did a somehow dangerous thing that, in my argumentation, to prove the importance of further renovation I mentioned that the quality of innovation counts but not the number of innovation. )</p>
 <p>②Based on the principle of free market, we need to point out that patent actually help the development of monopoly. The potential harm to the monopoly has been proved above. Then we need to show the tangible harm to the consumers, to the whole society. In a free market, fierce competition pushes all the producers keep improving their products, resulting in higher quality, lower cost of products. Bring material benefit to the consumers. </p>
 <p>To sum up, if we successfully prove our policy bring benefit to innovator, consumer and result in more high-quality innovation in the whole society, we can win the debate.<br>Motion 3 : THW grant elites two votes. </p>
@@ -431,79 +431,6 @@
     
     
       <category term="debate" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/debate/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdown learning</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/</id>
-    <published>2017-03-06T10:53:29.000Z</published>
-    <updated>2017-03-07T09:09:14.333Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="markdown初养成"><a href="#markdown初养成" class="headerlink" title="markdown初养成"></a>markdown初养成</h2><blockquote>
-<p>引用就是文本前面加 “&gt; ”（含空格不含引号）</p>
-</blockquote>
-<h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p> <a href="http://baidu.com" target="_blank" rel="external">这是一个百度链接</a></p>
-<h3 id="html插入图片法"><a href="#html插入图片法" class="headerlink" title="html插入图片法"></a>html插入图片法</h3><p> <img src="img/face.JPG" width="200" height="250"></p>
-<blockquote>
-<p>   这是第一段文字<br>   现在我来示范嵌套文字</p>
-<blockquote>
-<p>   这是被嵌套的文字</p>
-</blockquote>
-<p>　因为空格会被忽略，所以shift+space切换成全角模式再按space</p>
-</blockquote>
-<p> 1.这是一个无序列表（可用星号、加号减号后面接空格）</p>
-<ul>
-<li>F</li>
-</ul>
-<ul>
-<li>U</li>
-</ul>
-<ul>
-<li>C</li>
-</ul>
-<ul>
-<li>K</li>
-</ul>
-<p>·.这是一个有序列表</p>
-<ol>
-<li>Mon </li>
-<li>Tue </li>
-<li>Wed</li>
-<li>Thu</li>
-<li>Fri</li>
-<li>Sat</li>
-<li>Sun</li>
-</ol>
-<p>·.多级目录</p>
-<pre><code>1. 1
-</code></pre><p><strong>这是一段粗体</strong></p>
-<p><em>这是一段斜体</em></p>
-<p><del>删除效果</del></p>
-<blockquote>
-<p>行内标记’我被强调了’</p>
-<p>打符号要加斜杠\,我是个星号*</p>
-</blockquote>
-<pre>
-    For(;;)     
-        cout << "This is a segment of fake code!";
-</pre>
-
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
-<p>最后这是我的邮箱<a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#57;&#50;&#49;&#49;&#x38;&#49;&#x35;&#x34;&#57;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#109;">&#57;&#50;&#49;&#49;&#x38;&#49;&#x35;&#x34;&#57;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#109;</a></p>
-<hr>
-<h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;markdown初养成&quot;&gt;&lt;a href=&quot;#markdown初养成&quot; class=&quot;headerlink&quot; title=&quot;markdown初养成&quot;&gt;&lt;/a&gt;markdown初养成&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;引用就是文本前面加 “&amp;gt; ”（含空格
-    
-    </summary>
-    
-    
-      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
     
   </entry>
   
@@ -565,7 +492,7 @@
 </pre>
 
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
-<p>最后这是我的邮箱<a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x39;&#50;&#49;&#49;&#56;&#49;&#x35;&#x34;&#x39;&#x40;&#x71;&#113;&#46;&#99;&#111;&#x6d;">&#x39;&#50;&#49;&#49;&#56;&#49;&#x35;&#x34;&#x39;&#x40;&#x71;&#113;&#46;&#99;&#111;&#x6d;</a></p>
+<p>最后这是我的邮箱<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#57;&#50;&#49;&#x31;&#56;&#x31;&#53;&#52;&#57;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;">&#57;&#50;&#49;&#x31;&#56;&#x31;&#53;&#52;&#57;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;</a></p>
 <hr>
 <h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2><hr>
 <p>title: markdown进阶<br>date: 2017-03-07 00:11:02</p>
@@ -591,6 +518,79 @@
       <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
     
       <category term="markdown" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown learning</title>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/</id>
+    <published>2017-03-06T10:53:29.000Z</published>
+    <updated>2017-03-07T09:09:14.333Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="markdown初养成"><a href="#markdown初养成" class="headerlink" title="markdown初养成"></a>markdown初养成</h2><blockquote>
+<p>引用就是文本前面加 “&gt; ”（含空格不含引号）</p>
+</blockquote>
+<h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p> <a href="http://baidu.com" target="_blank" rel="external">这是一个百度链接</a></p>
+<h3 id="html插入图片法"><a href="#html插入图片法" class="headerlink" title="html插入图片法"></a>html插入图片法</h3><p> <img src="img/face.JPG" width="200" height="250"></p>
+<blockquote>
+<p>   这是第一段文字<br>   现在我来示范嵌套文字</p>
+<blockquote>
+<p>   这是被嵌套的文字</p>
+</blockquote>
+<p>　因为空格会被忽略，所以shift+space切换成全角模式再按space</p>
+</blockquote>
+<p> 1.这是一个无序列表（可用星号、加号减号后面接空格）</p>
+<ul>
+<li>F</li>
+</ul>
+<ul>
+<li>U</li>
+</ul>
+<ul>
+<li>C</li>
+</ul>
+<ul>
+<li>K</li>
+</ul>
+<p>·.这是一个有序列表</p>
+<ol>
+<li>Mon </li>
+<li>Tue </li>
+<li>Wed</li>
+<li>Thu</li>
+<li>Fri</li>
+<li>Sat</li>
+<li>Sun</li>
+</ol>
+<p>·.多级目录</p>
+<pre><code>1. 1
+</code></pre><p><strong>这是一段粗体</strong></p>
+<p><em>这是一段斜体</em></p>
+<p><del>删除效果</del></p>
+<blockquote>
+<p>行内标记’我被强调了’</p>
+<p>打符号要加斜杠\,我是个星号*</p>
+</blockquote>
+<pre>
+    For(;;)     
+        cout << "This is a segment of fake code!";
+</pre>
+
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
+<p>最后这是我的邮箱<a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x39;&#50;&#x31;&#x31;&#56;&#49;&#x35;&#52;&#57;&#x40;&#x71;&#x71;&#x2e;&#99;&#111;&#x6d;">&#x39;&#50;&#x31;&#x31;&#56;&#49;&#x35;&#52;&#57;&#x40;&#x71;&#x71;&#x2e;&#99;&#111;&#x6d;</a></p>
+<hr>
+<h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;markdown初养成&quot;&gt;&lt;a href=&quot;#markdown初养成&quot; class=&quot;headerlink&quot; title=&quot;markdown初养成&quot;&gt;&lt;/a&gt;markdown初养成&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;引用就是文本前面加 “&amp;gt; ”（含空格
+    
+    </summary>
+    
+    
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
     
   </entry>
   
