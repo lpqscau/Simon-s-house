@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-18T11:34:46.082Z</updated>
+  <updated>2017-10-18T11:43:58.144Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/test-math/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/test-math/</id>
+    <published>2017-10-18T11:43:58.144Z</published>
+    <updated>2017-10-18T11:43:58.144Z</updated>
+    
+    <content type="html"><![CDATA[<p>title: 感知机算法<br>date: 2017-10-18 17:10:06<br>mathjax: true<br>tags:</p>
+<pre><code>- machine learning
+- program
+- ML
+</code></pre><p>感知机算法-PLA-Proceptron Learning Algorithm</p>
+<p>感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行</p>
+<p>sign ($w^t*a$) &gt; v</p>
+<p>sign($w^t*a$) &gt; v</p>
+<a id="more"></a>
+<p>先得到n个输入，再将每个输入值加权，然后判断感知器输入的加权和最否达到某一阀值v，若达到，则通过sign函数输出1，否则输出-1。</p>
+<p>上面的公式可知，当权值向量w确定时，就可以利用感知器来做分类。</p>
+<p>特征向量和增广向量</p>
+<p>假设数据a=[x1,x2],则对应的w=[w1,w2],记阈值（threshold)为v</p>
+<p>假设w=[w1,w2]</p>
+<p>我们的判别方式是sign (w^t*a) &gt; v</p>
+<p>为了计算方便，我们不妨记增广向量a^` =[x0,x1,x2]=[1,x1,x2] (x0恒为1，事实上x0是常数就ok)</p>
+<p>则w^` =[w0,w1,w2]</p>
+<p>则w^<code>t*a^</code>  = w0x0+w1x1+w2x2 = w0+w1x1+w2x2 = w0 + w^ta</p>
+<p>那么我们如何获得感知器的权值呢？这需要根据训练集是否可分来采用不同的方法：</p>
+<p>1、训练集线性可分时 —&gt; 感知器训练法则</p>
+<p>　　为了得到可接受的权值，通常从随机的权值开始，然后利用训练集反复训练权值，最后得到能够正确分类所有样例的权向量。</p>
+<p>具体算法过程如下：</p>
+<p>A）初始化权向量w=(w0,w1,…,wn)，将权向量的每个值赋一个随机值。</p>
+<p>B）对于每个训练样例，首先计算其预测输出：</p>
+<p>&lt;/code&gt;lim_{x\to \infty} \ exp(-x)=0</p>
+<p>lim_{x \to \infty} \ exp(-x)=0</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;title: 感知机算法&lt;br&gt;date: 2017-10-18 17:10:06&lt;br&gt;mathjax: true&lt;br&gt;tags:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- machine learning
+- program
+- ML
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;感知机算法-PLA-Proceptron Learning Algorithm&lt;/p&gt;
+&lt;p&gt;感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行&lt;/p&gt;
+&lt;p&gt;sign ($w^t*a$) &amp;gt; v&lt;/p&gt;
+&lt;p&gt;sign($w^t*a$) &amp;gt; v&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>感知机算法</title>
@@ -282,9 +333,9 @@
     </summary>
     
     
-      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/essay/"/>
-    
       <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+    
+      <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/essay/"/>
     
   </entry>
   
@@ -341,9 +392,9 @@
     </summary>
     
     
-      <category term="debate" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/debate/"/>
-    
       <category term="essay" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/essay/"/>
+    
+      <category term="debate" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/debate/"/>
     
   </entry>
   
@@ -439,93 +490,6 @@
   </entry>
   
   <entry>
-    <title>markdown进阶</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown%E8%BF%9B%E9%98%B6/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown进阶/</id>
-    <published>2017-03-06T10:53:29.000Z</published>
-    <updated>2017-03-07T11:41:20.282Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="markdown进阶"><a href="#markdown进阶" class="headerlink" title="markdown进阶"></a>markdown进阶</h2><blockquote>
-<p>引用就是文本前面加 “&gt; ”（含空格不含引号）</p>
-</blockquote>
-<h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p> <a href="http://baidu.com" target="_blank" rel="external">这是一个百度链接</a></p>
-<blockquote>
-<p>   这是第一段文字<br>   现在我来示范嵌套文字</p>
-<blockquote>
-<p>   这是被嵌套的文字</p>
-</blockquote>
-<p>　因为空格会被忽略，所以shift+space切换成全角模式再按space</p>
-</blockquote>
-<a id="more"></a>
-<p> 1.这是一个无序列表（可用星号、加号减号后面接空格）</p>
-<ul>
-<li>F</li>
-</ul>
-<ul>
-<li>U</li>
-</ul>
-<ul>
-<li>C</li>
-</ul>
-<ul>
-<li>K</li>
-</ul>
-<p>·.这是一个有序列表</p>
-<ol>
-<li>Mon </li>
-<li>Tue </li>
-<li>Wed</li>
-<li>Thu</li>
-<li>Fri</li>
-<li>Sat</li>
-<li>Sun</li>
-</ol>
-<p>·.多级目录</p>
-<pre><code>1. 1
-</code></pre><p><strong>这是一段粗体</strong></p>
-<p><em>这是一段斜体</em></p>
-<p><del>删除效果</del></p>
-<blockquote>
-<p>行内标记’我被强调了’</p>
-<p>打符号要加斜杠\,我是个星号*</p>
-</blockquote>
-<h3 id="插入图片语法-不推荐，不能设置大小"><a href="#插入图片语法-不推荐，不能设置大小" class="headerlink" title="插入图片语法(不推荐，不能设置大小)"></a>插入图片语法(不推荐，不能设置大小)</h3><p> <img src="img/week2.PNG" alt="五环!"></p>
-<pre>
-    For(;;)     
-        cout << "This is a segment of fake code!";
-</pre>
-
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
-<p>最后这是我的邮箱<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#57;&#50;&#49;&#x31;&#56;&#x31;&#53;&#52;&#57;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;">&#57;&#50;&#49;&#x31;&#56;&#x31;&#53;&#52;&#57;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;</a></p>
-<hr>
-<h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2><hr>
-<p>title: markdown进阶<br>date: 2017-03-07 00:11:02</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;markdown进阶&quot;&gt;&lt;a href=&quot;#markdown进阶&quot; class=&quot;headerlink&quot; title=&quot;markdown进阶&quot;&gt;&lt;/a&gt;markdown进阶&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;引用就是文本前面加 “&amp;gt; ”（含空格不含引号）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;插入链接&quot;&gt;&lt;a href=&quot;#插入链接&quot; class=&quot;headerlink&quot; title=&quot;插入链接&quot;&gt;&lt;/a&gt;插入链接&lt;/h3&gt;&lt;p&gt; &lt;a href=&quot;http://baidu.com&quot;&gt;这是一个百度链接&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;   这是第一段文字&lt;br&gt;   现在我来示范嵌套文字&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;   这是被嵌套的文字&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;　因为空格会被忽略，所以shift+space切换成全角模式再按space&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
-    
-      <category term="markdown" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
     <title>markdown learning</title>
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/</id>
@@ -574,7 +538,7 @@
 <p><del>删除效果</del></p>
 <blockquote>
 <p>行内标记’我被强调了’</p>
-<p>打符号要加斜杠\,我是个星号*</p>
+<p>打符号要加斜杠\\,我是个星号*</p>
 </blockquote>
 <pre>
     For(;;)     
@@ -582,7 +546,7 @@
 </pre>
 
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
-<p>最后这是我的邮箱<a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x39;&#50;&#x31;&#x31;&#56;&#49;&#x35;&#52;&#57;&#x40;&#x71;&#x71;&#x2e;&#99;&#111;&#x6d;">&#x39;&#50;&#x31;&#x31;&#56;&#49;&#x35;&#52;&#57;&#x40;&#x71;&#x71;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p>最后这是我的邮箱<a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#57;&#50;&#x31;&#49;&#56;&#x31;&#53;&#52;&#57;&#x40;&#x71;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#57;&#50;&#x31;&#49;&#56;&#x31;&#53;&#52;&#57;&#x40;&#x71;&#x71;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <hr>
 <h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2>]]></content>
     
@@ -595,6 +559,93 @@
     
     
       <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown进阶</title>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown%E8%BF%9B%E9%98%B6/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown进阶/</id>
+    <published>2017-03-06T10:53:29.000Z</published>
+    <updated>2017-03-07T11:41:20.282Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="markdown进阶"><a href="#markdown进阶" class="headerlink" title="markdown进阶"></a>markdown进阶</h2><blockquote>
+<p>引用就是文本前面加 “&gt; ”（含空格不含引号）</p>
+</blockquote>
+<h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p> <a href="http://baidu.com" target="_blank" rel="external">这是一个百度链接</a></p>
+<blockquote>
+<p>   这是第一段文字<br>   现在我来示范嵌套文字</p>
+<blockquote>
+<p>   这是被嵌套的文字</p>
+</blockquote>
+<p>　因为空格会被忽略，所以shift+space切换成全角模式再按space</p>
+</blockquote>
+<a id="more"></a>
+<p> 1.这是一个无序列表（可用星号、加号减号后面接空格）</p>
+<ul>
+<li>F</li>
+</ul>
+<ul>
+<li>U</li>
+</ul>
+<ul>
+<li>C</li>
+</ul>
+<ul>
+<li>K</li>
+</ul>
+<p>·.这是一个有序列表</p>
+<ol>
+<li>Mon </li>
+<li>Tue </li>
+<li>Wed</li>
+<li>Thu</li>
+<li>Fri</li>
+<li>Sat</li>
+<li>Sun</li>
+</ol>
+<p>·.多级目录</p>
+<pre><code>1. 1
+</code></pre><p><strong>这是一段粗体</strong></p>
+<p><em>这是一段斜体</em></p>
+<p><del>删除效果</del></p>
+<blockquote>
+<p>行内标记’我被强调了’</p>
+<p>打符号要加斜杠\\,我是个星号*</p>
+</blockquote>
+<h3 id="插入图片语法-不推荐，不能设置大小"><a href="#插入图片语法-不推荐，不能设置大小" class="headerlink" title="插入图片语法(不推荐，不能设置大小)"></a>插入图片语法(不推荐，不能设置大小)</h3><p> <img src="img/week2.PNG" alt="五环!"></p>
+<pre>
+    For(;;)     
+        cout << "This is a segment of fake code!";
+</pre>
+
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
+<p>最后这是我的邮箱<a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x39;&#x32;&#x31;&#49;&#56;&#x31;&#x35;&#52;&#57;&#x40;&#x71;&#113;&#46;&#99;&#111;&#109;">&#x39;&#x32;&#x31;&#49;&#56;&#x31;&#x35;&#52;&#57;&#x40;&#x71;&#113;&#46;&#99;&#111;&#109;</a></p>
+<hr>
+<h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2><hr>
+<p>title: markdown进阶<br>date: 2017-03-07 00:11:02</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;markdown进阶&quot;&gt;&lt;a href=&quot;#markdown进阶&quot; class=&quot;headerlink&quot; title=&quot;markdown进阶&quot;&gt;&lt;/a&gt;markdown进阶&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;引用就是文本前面加 “&amp;gt; ”（含空格不含引号）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;插入链接&quot;&gt;&lt;a href=&quot;#插入链接&quot; class=&quot;headerlink&quot; title=&quot;插入链接&quot;&gt;&lt;/a&gt;插入链接&lt;/h3&gt;&lt;p&gt; &lt;a href=&quot;http://baidu.com&quot;&gt;这是一个百度链接&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;   这是第一段文字&lt;br&gt;   现在我来示范嵌套文字&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;   这是被嵌套的文字&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;　因为空格会被忽略，所以shift+space切换成全角模式再按space&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+    
+      <category term="markdown" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/markdown/"/>
     
   </entry>
   
