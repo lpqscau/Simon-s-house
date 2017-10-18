@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-18T11:10:05.007Z</updated>
+  <updated>2017-10-18T11:25:05.663Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/%E6%84%9F%E7%9F%A5%E6%9C%BA%E7%AE%97%E6%B3%95/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/感知机算法/</id>
     <published>2017-10-18T09:10:06.000Z</published>
-    <updated>2017-10-18T11:10:05.007Z</updated>
+    <updated>2017-10-18T11:25:05.663Z</updated>
     
     <content type="html"><![CDATA[<h3 id="感知机算法-PLA-Proceptron-Learning-Algorithm"><a href="#感知机算法-PLA-Proceptron-Learning-Algorithm" class="headerlink" title="感知机算法-PLA-Proceptron Learning Algorithm"></a>感知机算法-PLA-Proceptron Learning Algorithm</h3><p>感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行</p>
-<a id="more"></a>
 <p>先得到n个输入，再将每个输入值加权，然后判断感知器输入的加权和最否达到某一阀值v，若达到，则通过sign函数输出1，否则输出-1。</p>
 <p><img src="http://images0.cnblogs.com/blog2015/680781/201508/012141117983823.jpg" alt="img"></p>
 <p>上面的公式可知，当权值向量w确定时，就可以利用感知器来做分类。</p>
+<a id="more"></a>
 <h4 id="特征向量和增广向量"><a href="#特征向量和增广向量" class="headerlink" title="特征向量和增广向量"></a>特征向量和增广向量</h4><p>假设数据a=[x1,x2],则对应的w=[w1,w2],记阈值（threshold)为v</p>
 <p>假设w=[w1,w2]</p>
 <p>我们的判别方式是sign ($w^t$*a) &gt; v</p>
@@ -46,6 +46,9 @@
     <summary type="html">
     
       &lt;h3 id=&quot;感知机算法-PLA-Proceptron-Learning-Algorithm&quot;&gt;&lt;a href=&quot;#感知机算法-PLA-Proceptron-Learning-Algorithm&quot; class=&quot;headerlink&quot; title=&quot;感知机算法-PLA-Proceptron Learning Algorithm&quot;&gt;&lt;/a&gt;感知机算法-PLA-Proceptron Learning Algorithm&lt;/h3&gt;&lt;p&gt;感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行&lt;/p&gt;
+&lt;p&gt;先得到n个输入，再将每个输入值加权，然后判断感知器输入的加权和最否达到某一阀值v，若达到，则通过sign函数输出1，否则输出-1。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://images0.cnblogs.com/blog2015/680781/201508/012141117983823.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上面的公式可知，当权值向量w确定时，就可以利用感知器来做分类。&lt;/p&gt;
     
     </summary>
     
