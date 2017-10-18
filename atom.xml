@@ -179,33 +179,6 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/20/hello-world/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/20/hello-world/</id>
-    <published>2017-09-20T02:03:42.655Z</published>
-    <updated>2017-03-04T12:18:48.161Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>KNN算法及python问题</title>
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/08/KNN%E7%AE%97%E6%B3%95%E5%8F%8Apython%E5%B0%8F%E8%AF%95%E2%80%9C/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/09/08/KNN算法及python小试“/</id>
@@ -419,6 +392,79 @@
   </entry>
   
   <entry>
+    <title>markdown learning</title>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/</id>
+    <published>2017-03-06T10:53:29.000Z</published>
+    <updated>2017-03-07T09:09:14.333Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="markdown初养成"><a href="#markdown初养成" class="headerlink" title="markdown初养成"></a>markdown初养成</h2><blockquote>
+<p>引用就是文本前面加 “&gt; ”（含空格不含引号）</p>
+</blockquote>
+<h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p> <a href="http://baidu.com" target="_blank" rel="external">这是一个百度链接</a></p>
+<h3 id="html插入图片法"><a href="#html插入图片法" class="headerlink" title="html插入图片法"></a>html插入图片法</h3><p> <img src="img/face.JPG" width="200" height="250"></p>
+<blockquote>
+<p>   这是第一段文字<br>   现在我来示范嵌套文字</p>
+<blockquote>
+<p>   这是被嵌套的文字</p>
+</blockquote>
+<p>　因为空格会被忽略，所以shift+space切换成全角模式再按space</p>
+</blockquote>
+<p> 1.这是一个无序列表（可用星号、加号减号后面接空格）</p>
+<ul>
+<li>F</li>
+</ul>
+<ul>
+<li>U</li>
+</ul>
+<ul>
+<li>C</li>
+</ul>
+<ul>
+<li>K</li>
+</ul>
+<p>·.这是一个有序列表</p>
+<ol>
+<li>Mon </li>
+<li>Tue </li>
+<li>Wed</li>
+<li>Thu</li>
+<li>Fri</li>
+<li>Sat</li>
+<li>Sun</li>
+</ol>
+<p>·.多级目录</p>
+<pre><code>1. 1
+</code></pre><p><strong>这是一段粗体</strong></p>
+<p><em>这是一段斜体</em></p>
+<p><del>删除效果</del></p>
+<blockquote>
+<p>行内标记’我被强调了’</p>
+<p>打符号要加斜杠\,我是个星号*</p>
+</blockquote>
+<pre>
+    For(;;)     
+        cout << "This is a segment of fake code!";
+</pre>
+
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
+<p>最后这是我的邮箱<a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x39;&#50;&#49;&#x31;&#x38;&#49;&#53;&#52;&#x39;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;">&#x39;&#50;&#49;&#x31;&#x38;&#49;&#53;&#52;&#x39;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<hr>
+<h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;markdown初养成&quot;&gt;&lt;a href=&quot;#markdown初养成&quot; class=&quot;headerlink&quot; title=&quot;markdown初养成&quot;&gt;&lt;/a&gt;markdown初养成&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;引用就是文本前面加 “&amp;gt; ”（含空格
+    
+    </summary>
+    
+    
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
     <title>markdown进阶</title>
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown%E8%BF%9B%E9%98%B6/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown进阶/</id>
@@ -502,79 +548,6 @@
       <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
     
       <category term="markdown" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdown learning</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/</id>
-    <published>2017-03-06T10:53:29.000Z</published>
-    <updated>2017-03-07T09:09:14.333Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="markdown初养成"><a href="#markdown初养成" class="headerlink" title="markdown初养成"></a>markdown初养成</h2><blockquote>
-<p>引用就是文本前面加 “&gt; ”（含空格不含引号）</p>
-</blockquote>
-<h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p> <a href="http://baidu.com" target="_blank" rel="external">这是一个百度链接</a></p>
-<h3 id="html插入图片法"><a href="#html插入图片法" class="headerlink" title="html插入图片法"></a>html插入图片法</h3><p> <img src="img/face.JPG" width="200" height="250"></p>
-<blockquote>
-<p>   这是第一段文字<br>   现在我来示范嵌套文字</p>
-<blockquote>
-<p>   这是被嵌套的文字</p>
-</blockquote>
-<p>　因为空格会被忽略，所以shift+space切换成全角模式再按space</p>
-</blockquote>
-<p> 1.这是一个无序列表（可用星号、加号减号后面接空格）</p>
-<ul>
-<li>F</li>
-</ul>
-<ul>
-<li>U</li>
-</ul>
-<ul>
-<li>C</li>
-</ul>
-<ul>
-<li>K</li>
-</ul>
-<p>·.这是一个有序列表</p>
-<ol>
-<li>Mon </li>
-<li>Tue </li>
-<li>Wed</li>
-<li>Thu</li>
-<li>Fri</li>
-<li>Sat</li>
-<li>Sun</li>
-</ol>
-<p>·.多级目录</p>
-<pre><code>1. 1
-</code></pre><p><strong>这是一段粗体</strong></p>
-<p><em>这是一段斜体</em></p>
-<p><del>删除效果</del></p>
-<blockquote>
-<p>行内标记’我被强调了’</p>
-<p>打符号要加斜杠\,我是个星号*</p>
-</blockquote>
-<pre>
-    For(;;)     
-        cout << "This is a segment of fake code!";
-</pre>
-
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
-<p>最后这是我的邮箱<a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x39;&#50;&#49;&#x31;&#x38;&#49;&#53;&#52;&#x39;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;">&#x39;&#50;&#49;&#x31;&#x38;&#49;&#53;&#52;&#x39;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;</a></p>
-<hr>
-<h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;markdown初养成&quot;&gt;&lt;a href=&quot;#markdown初养成&quot; class=&quot;headerlink&quot; title=&quot;markdown初养成&quot;&gt;&lt;/a&gt;markdown初养成&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;引用就是文本前面加 “&amp;gt; ”（含空格
-    
-    </summary>
-    
-    
-      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
     
   </entry>
   
