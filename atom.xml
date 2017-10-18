@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-17T01:41:00.497Z</updated>
+  <updated>2017-10-18T00:38:47.891Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>uppal</title>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/uppal/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/uppal/</id>
+    <published>2017-10-18T00:05:50.000Z</published>
+    <updated>2017-10-18T00:38:47.891Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="what’s-uppaal"><a href="#what’s-uppaal" class="headerlink" title="what’s uppaal"></a>what’s uppaal</h2><h3 id="uppaal简述"><a href="#uppaal简述" class="headerlink" title="uppaal简述"></a>uppaal简述</h3><p>感觉上uppaal最主要有两个功能，一个是实现automata的可视化（xml）<br>第二个是模拟器可以用来验证模型性质</p>
+<h3 id="uppaal使用"><a href="#uppaal使用" class="headerlink" title="uppaal使用"></a>uppaal使用</h3><img src="/Simon-s-house/2017/10/18/uppal/1.png" alt="1.png" title="">
+<p>如上图，uppaal实际上在我看来是面向对象的，上图是一个：人插卡取钱、ATM吐钱（卡）、银行验证余额是否能取钱  的模型，所以我们就要实现三个进程，这三个进程通过变量和同步信号互相沟通</p>
+<h4 id="location的属性"><a href="#location的属性" class="headerlink" title="location的属性"></a>location的属性</h4><ol>
+<li>是否initial</li>
+</ol>
+<h4 id="transition的属性"><a href="#transition的属性" class="headerlink" title="transition的属性"></a>transition的属性</h4>
+<ol>
+<li>select：选择变量，指定当变量来自某个范围的时候才接受</li>
+<li>guard：走这条边必须满足的条件</li>
+<li>sync： 同步信号，<ol>
+<li>sync_id?:问号结束的话，表示经过这条边，会发出这个同步信号</li>
+<li>sync_id!:感叹号的话，表示当另一个模型发出这个同步信号，当前模型就会收到信号，走这条边</li>
+</ol>
+</li>
+<li>update：经过这条边时，变量进行更新</li>
+</ol>
+<h4 id="变量域"><a href="#变量域" class="headerlink" title="变量域"></a>变量域</h4><p>整个模型文件有不同的进程，不同进程有自己的变量，也有全局变量，其它进程不能访问到自己的变量<br><img src="/Simon-s-house/2017/10/18/uppal/3.png" alt="3.png" title=""></p>
+<ol>
+<li>同步信号在全局声明</li>
+<li>局使用的变量应该全局声明</li>
+<li>每个进程都可以有自己的初始化变量，在全局文件创建的时候赋值<code>p=process(1)</code></li>
+</ol>
+<h4 id="模型设计"><a href="#模型设计" class="headerlink" title="模型设计"></a>模型设计</h4><ol>
+<li>每个transition必须是atomic的（防止context switch）的时候出现错误</li>
+<li>每个进程都要有initial state</li>
+<li>为了防止模型死锁，每个进程都要有循环（回到initial state）</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;what’s-uppaal&quot;&gt;&lt;a href=&quot;#what’s-uppaal&quot; class=&quot;headerlink&quot; title=&quot;what’s uppaal&quot;&gt;&lt;/a&gt;what’s uppaal&lt;/h2&gt;&lt;h3 id=&quot;uppaal简述&quot;&gt;&lt;a href=&quot;#u
+    
+    </summary>
+    
+    
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+    
+      <category term="uppaal" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/uppaal/"/>
+    
+      <category term="realtime-system" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/realtime-system/"/>
+    
+  </entry>
   
   <entry>
     <title>github基础操作</title>
@@ -366,79 +418,6 @@
   </entry>
   
   <entry>
-    <title>markdown learning</title>
-    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/"/>
-    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/</id>
-    <published>2017-03-06T10:53:29.000Z</published>
-    <updated>2017-03-07T09:09:14.333Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="markdown初养成"><a href="#markdown初养成" class="headerlink" title="markdown初养成"></a>markdown初养成</h2><blockquote>
-<p>引用就是文本前面加 “&gt; ”（含空格不含引号）</p>
-</blockquote>
-<h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p> <a href="http://baidu.com" target="_blank" rel="external">这是一个百度链接</a></p>
-<h3 id="html插入图片法"><a href="#html插入图片法" class="headerlink" title="html插入图片法"></a>html插入图片法</h3><p> <img src="img/face.JPG" width="200" height="250"></p>
-<blockquote>
-<p>   这是第一段文字<br>   现在我来示范嵌套文字</p>
-<blockquote>
-<p>   这是被嵌套的文字</p>
-</blockquote>
-<p>　因为空格会被忽略，所以shift+space切换成全角模式再按space</p>
-</blockquote>
-<p> 1.这是一个无序列表（可用星号、加号减号后面接空格）</p>
-<ul>
-<li>F</li>
-</ul>
-<ul>
-<li>U</li>
-</ul>
-<ul>
-<li>C</li>
-</ul>
-<ul>
-<li>K</li>
-</ul>
-<p>·.这是一个有序列表</p>
-<ol>
-<li>Mon </li>
-<li>Tue </li>
-<li>Wed</li>
-<li>Thu</li>
-<li>Fri</li>
-<li>Sat</li>
-<li>Sun</li>
-</ol>
-<p>·.多级目录</p>
-<pre><code>1. 1
-</code></pre><p><strong>这是一段粗体</strong></p>
-<p><em>这是一段斜体</em></p>
-<p><del>删除效果</del></p>
-<blockquote>
-<p>行内标记’我被强调了’</p>
-<p>打符号要加斜杠\,我是个星号*</p>
-</blockquote>
-<pre>
-    For(;;)     
-        cout << "This is a segment of fake code!";
-</pre>
-
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
-<p>最后这是我的邮箱<a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#57;&#50;&#x31;&#49;&#x38;&#49;&#x35;&#x34;&#57;&#64;&#113;&#113;&#x2e;&#x63;&#111;&#x6d;">&#57;&#50;&#x31;&#49;&#x38;&#49;&#x35;&#x34;&#57;&#64;&#113;&#113;&#x2e;&#x63;&#111;&#x6d;</a></p>
-<hr>
-<h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;markdown初养成&quot;&gt;&lt;a href=&quot;#markdown初养成&quot; class=&quot;headerlink&quot; title=&quot;markdown初养成&quot;&gt;&lt;/a&gt;markdown初养成&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;引用就是文本前面加 “&amp;gt; ”（含空格
-    
-    </summary>
-    
-    
-      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
-    
-  </entry>
-  
-  <entry>
     <title>markdown进阶</title>
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown%E8%BF%9B%E9%98%B6/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown进阶/</id>
@@ -496,7 +475,7 @@
 </pre>
 
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
-<p>最后这是我的邮箱<a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x39;&#x32;&#49;&#49;&#x38;&#49;&#53;&#x34;&#x39;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#x6d;">&#x39;&#x32;&#49;&#49;&#x38;&#49;&#53;&#x34;&#x39;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>最后这是我的邮箱<a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x39;&#50;&#x31;&#x31;&#x38;&#x31;&#x35;&#52;&#x39;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#109;">&#x39;&#50;&#x31;&#x31;&#x38;&#x31;&#x35;&#52;&#x39;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#109;</a></p>
 <hr>
 <h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2><hr>
 <p>title: markdown进阶<br>date: 2017-03-07 00:11:02</p>
@@ -522,6 +501,79 @@
       <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
     
       <category term="markdown" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown learning</title>
+    <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/"/>
+    <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/03/06/markdown-learning/</id>
+    <published>2017-03-06T10:53:29.000Z</published>
+    <updated>2017-03-07T09:09:14.333Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="markdown初养成"><a href="#markdown初养成" class="headerlink" title="markdown初养成"></a>markdown初养成</h2><blockquote>
+<p>引用就是文本前面加 “&gt; ”（含空格不含引号）</p>
+</blockquote>
+<h3 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h3><p> <a href="http://baidu.com" target="_blank" rel="external">这是一个百度链接</a></p>
+<h3 id="html插入图片法"><a href="#html插入图片法" class="headerlink" title="html插入图片法"></a>html插入图片法</h3><p> <img src="img/face.JPG" width="200" height="250"></p>
+<blockquote>
+<p>   这是第一段文字<br>   现在我来示范嵌套文字</p>
+<blockquote>
+<p>   这是被嵌套的文字</p>
+</blockquote>
+<p>　因为空格会被忽略，所以shift+space切换成全角模式再按space</p>
+</blockquote>
+<p> 1.这是一个无序列表（可用星号、加号减号后面接空格）</p>
+<ul>
+<li>F</li>
+</ul>
+<ul>
+<li>U</li>
+</ul>
+<ul>
+<li>C</li>
+</ul>
+<ul>
+<li>K</li>
+</ul>
+<p>·.这是一个有序列表</p>
+<ol>
+<li>Mon </li>
+<li>Tue </li>
+<li>Wed</li>
+<li>Thu</li>
+<li>Fri</li>
+<li>Sat</li>
+<li>Sun</li>
+</ol>
+<p>·.多级目录</p>
+<pre><code>1. 1
+</code></pre><p><strong>这是一段粗体</strong></p>
+<p><em>这是一段斜体</em></p>
+<p><del>删除效果</del></p>
+<blockquote>
+<p>行内标记’我被强调了’</p>
+<p>打符号要加斜杠\,我是个星号*</p>
+</blockquote>
+<pre>
+    For(;;)     
+        cout << "This is a segment of fake code!";
+</pre>
+
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span> <span class="keyword">is</span> my code;</div><div class="line">Thanks!</div></pre></td></tr></table></figure>
+<p>最后这是我的邮箱<a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x39;&#50;&#49;&#x31;&#x38;&#49;&#53;&#52;&#x39;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;">&#x39;&#50;&#49;&#x31;&#x38;&#49;&#53;&#52;&#x39;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<hr>
+<h2 id="可爱的分割线"><a href="#可爱的分割线" class="headerlink" title="可爱的分割线"></a>可爱的分割线</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;markdown初养成&quot;&gt;&lt;a href=&quot;#markdown初养成&quot; class=&quot;headerlink&quot; title=&quot;markdown初养成&quot;&gt;&lt;/a&gt;markdown初养成&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;引用就是文本前面加 “&amp;gt; ”（含空格
+    
+    </summary>
+    
+    
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
     
   </entry>
   

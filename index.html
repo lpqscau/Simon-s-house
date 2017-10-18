@@ -146,7 +146,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/Simon-s-house/tags/blog/" style="font-size: 12.5px;">blog</a> <a href="/Simon-s-house/tags/command/" style="font-size: 10px;">command</a> <a href="/Simon-s-house/tags/css/" style="font-size: 10px;">css</a> <a href="/Simon-s-house/tags/debate/" style="font-size: 15px;">debate</a> <a href="/Simon-s-house/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/Simon-s-house/tags/github/" style="font-size: 10px;">github</a> <a href="/Simon-s-house/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/Simon-s-house/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/Simon-s-house/tags/program/" style="font-size: 20px;">program</a> <a href="/Simon-s-house/tags/python/" style="font-size: 10px;">python</a> <a href="/Simon-s-house/tags/test/" style="font-size: 10px;">test</a> <a href="/Simon-s-house/tags/随笔/" style="font-size: 10px;">随笔</a>
+                        <a href="/Simon-s-house/tags/blog/" style="font-size: 12.5px;">blog</a> <a href="/Simon-s-house/tags/command/" style="font-size: 10px;">command</a> <a href="/Simon-s-house/tags/css/" style="font-size: 10px;">css</a> <a href="/Simon-s-house/tags/debate/" style="font-size: 15px;">debate</a> <a href="/Simon-s-house/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/Simon-s-house/tags/github/" style="font-size: 10px;">github</a> <a href="/Simon-s-house/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/Simon-s-house/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/Simon-s-house/tags/program/" style="font-size: 20px;">program</a> <a href="/Simon-s-house/tags/python/" style="font-size: 10px;">python</a> <a href="/Simon-s-house/tags/realtime-system/" style="font-size: 10px;">realtime-system</a> <a href="/Simon-s-house/tags/test/" style="font-size: 10px;">test</a> <a href="/Simon-s-house/tags/uppaal/" style="font-size: 10px;">uppaal</a> <a href="/Simon-s-house/tags/随笔/" style="font-size: 10px;">随笔</a>
                     </div>
                 </section>
                 
@@ -223,6 +223,92 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-uppal" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/Simon-s-house/2017/10/18/uppal/" class="article-date">
+      <time datetime="2017-10-18T00:05:50.000Z" itemprop="datePublished">2017-10-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Simon-s-house/2017/10/18/uppal/">uppal</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="what’s-uppaal"><a href="#what’s-uppaal" class="headerlink" title="what’s uppaal"></a>what’s uppaal</h2><h3 id="uppaal简述"><a href="#uppaal简述" class="headerlink" title="uppaal简述"></a>uppaal简述</h3><p>感觉上uppaal最主要有两个功能，一个是实现automata的可视化（xml）<br>第二个是模拟器可以用来验证模型性质</p>
+<h3 id="uppaal使用"><a href="#uppaal使用" class="headerlink" title="uppaal使用"></a>uppaal使用</h3><img src="/Simon-s-house/2017/10/18/uppal/1.png" alt="1.png" title="">
+<p>如上图，uppaal实际上在我看来是面向对象的，上图是一个：人插卡取钱、ATM吐钱（卡）、银行验证余额是否能取钱  的模型，所以我们就要实现三个进程，这三个进程通过变量和同步信号互相沟通</p>
+<h4 id="location的属性"><a href="#location的属性" class="headerlink" title="location的属性"></a>location的属性</h4><ol>
+<li>是否initial</li>
+</ol>
+<h4 id="transition的属性"><a href="#transition的属性" class="headerlink" title="transition的属性"></a>transition的属性</h4>
+<ol>
+<li>select：选择变量，指定当变量来自某个范围的时候才接受</li>
+<li>guard：走这条边必须满足的条件</li>
+<li>sync： 同步信号，<ol>
+<li>sync_id?:问号结束的话，表示经过这条边，会发出这个同步信号</li>
+<li>sync_id!:感叹号的话，表示当另一个模型发出这个同步信号，当前模型就会收到信号，走这条边</li>
+</ol>
+</li>
+<li>update：经过这条边时，变量进行更新</li>
+</ol>
+<h4 id="变量域"><a href="#变量域" class="headerlink" title="变量域"></a>变量域</h4><p>整个模型文件有不同的进程，不同进程有自己的变量，也有全局变量，其它进程不能访问到自己的变量<br><img src="/Simon-s-house/2017/10/18/uppal/3.png" alt="3.png" title=""></p>
+<ol>
+<li>同步信号在全局声明</li>
+<li>局使用的变量应该全局声明</li>
+<li>每个进程都可以有自己的初始化变量，在全局文件创建的时候赋值<code>p=process(1)</code></li>
+</ol>
+<h4 id="模型设计"><a href="#模型设计" class="headerlink" title="模型设计"></a>模型设计</h4><ol>
+<li>每个transition必须是atomic的（防止context switch）的时候出现错误</li>
+<li>每个进程都要有initial state</li>
+<li>为了防止模型死锁，每个进程都要有循环（回到initial state）</li>
+</ol>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/realtime-system/">realtime-system</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/uppaal/">uppaal</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-github基础操作" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -465,70 +551,6 @@
       
 
       
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-KNN算法及python小试“" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/Simon-s-house/2017/09/08/KNN算法及python小试“/" class="article-date">
-      <time datetime="2017-09-07T17:22:04.000Z" itemprop="datePublished">2017-09-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Simon-s-house/2017/09/08/KNN算法及python小试“/">KNN算法及python问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="机器学习实战之KNN"><a href="#机器学习实战之KNN" class="headerlink" title="机器学习实战之KNN"></a>机器学习实战之KNN</h1><h2 id="创造数据集"><a href="#创造数据集" class="headerlink" title="创造数据集"></a>创造数据集</h2><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> *</div><div class="line"><span class="keyword">import</span> operator</div><div class="line"><span class="keyword">def</span> createDataSet():</div><div class="line">	<span class="keyword">group</span> = array([[<span class="number">1.0</span>,<span class="number">1.1</span>],[<span class="number">1.0</span>,<span class="number">1.0</span>],[<span class="number">0</span>,<span class="number">0</span>],[<span class="number">0</span>,<span class="number">0.1</span>]])</div><div class="line">	labels = [<span class="string">'A'</span>,<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'B'</span>]</div><div class="line"><span class="keyword">return</span> <span class="keyword">group</span>,labels</div></pre></td></tr></table></figure>
-<p>创造一个4*2的array，数值可理解为坐标，label就是对应分类<br>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/machine-learning/">machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/python/">python</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/Simon-s-house/2017/09/08/KNN算法及python小试“/#more">read more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
