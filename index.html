@@ -251,35 +251,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="what’s-uppaal"><a href="#what’s-uppaal" class="headerlink" title="what’s uppaal"></a>what’s uppaal</h2><h3 id="uppaal简述"><a href="#uppaal简述" class="headerlink" title="uppaal简述"></a>uppaal简述</h3><p>感觉上uppaal最主要有两个功能，一个是实现automata的可视化（xml）<br>第二个是模拟器可以用来验证模型性质</p>
-<h3 id="uppaal使用"><a href="#uppaal使用" class="headerlink" title="uppaal使用"></a>uppaal使用</h3><img src="/Simon-s-house/2017/10/18/uppal/1.png" alt="1.png" title="">
-<p>如上图，uppaal实际上在我看来是面向对象的，上图是一个：人插卡取钱、ATM吐钱（卡）、银行验证余额是否能取钱  的模型，所以我们就要实现三个进程，这三个进程通过变量和同步信号互相沟通</p>
-<h4 id="location的属性"><a href="#location的属性" class="headerlink" title="location的属性"></a>location的属性</h4><ol>
-<li>是否initial</li>
-</ol>
-<h4 id="transition的属性"><a href="#transition的属性" class="headerlink" title="transition的属性"></a>transition的属性</h4>
-<ol>
-<li>select：选择变量，指定当变量来自某个范围的时候才接受</li>
-<li>guard：走这条边必须满足的条件</li>
-<li>sync： 同步信号，<ol>
-<li>sync_id?:问号结束的话，表示经过这条边，会发出这个同步信号</li>
-<li>sync_id!:感叹号的话，表示当另一个模型发出这个同步信号，当前模型就会收到信号，走这条边</li>
-</ol>
-</li>
-<li>update：经过这条边时，变量进行更新</li>
-</ol>
-<h4 id="变量域"><a href="#变量域" class="headerlink" title="变量域"></a>变量域</h4><p>整个模型文件有不同的进程，不同进程有自己的变量，也有全局变量，其它进程不能访问到自己的变量<br><img src="/Simon-s-house/2017/10/18/uppal/3.png" alt="3.png" title=""></p>
-<ol>
-<li>同步信号在全局声明</li>
-<li>局使用的变量应该全局声明</li>
-<li>每个进程都可以有自己的初始化变量，在全局文件创建的时候赋值<code>p=process(1)</code></li>
-</ol>
-<h4 id="模型设计"><a href="#模型设计" class="headerlink" title="模型设计"></a>模型设计</h4><ol>
-<li>每个transition必须是atomic的（防止context switch）的时候出现错误</li>
-<li>每个进程都要有initial state</li>
-<li>为了防止模型死锁，每个进程都要有循环（回到initial state）</li>
-</ol>
-
+              <h2 id="what’s-uppaal"><a href="#what’s-uppaal" class="headerlink" title="what’s uppaal"></a>what’s uppaal</h2><h3 id="uppaal简述"><a href="#uppaal简述" class="headerlink" title="uppaal简述"></a>uppaal简述</h3><p>感觉上uppaal最主要有两个功能，一个是实现automata的可视化（xml）<br>第二个是模拟器可以用来验证模型性质</p>
+          
       
       
     </div>
@@ -293,6 +266,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/realtime-system/">realtime-system</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/uppaal/">uppaal</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/Simon-s-house/2017/10/18/uppal/#more">read more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
