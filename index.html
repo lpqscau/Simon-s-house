@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
   <title>Simon-s-house</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -48,10 +48,10 @@
           isCategory: false,
           open_in_new: false
       }
-  </script>
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body>
-  <div id="container">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
@@ -260,7 +260,7 @@
 <p>我们的判别方式是sign ($w^t$*a) &gt; v</p>
 <p>为了计算方便，我们不妨记增广向量$a^`$ =[x0,x1,x2]=[1,x1,x2] (x0恒为1，事实上x0是常数就ok)</p>
 <p>则$w^`$ =[w0,w1,w2]</p>
-<p>则$w^<code>t$*$a^</code>$  = w0x0+w1x1+w2x2 = w0+w1x1+w2x2 = w0 + </p>
+<p>则$w^<code>t$*$a^</code>$  = w0x0+w1x1+w2x2 = w0+w1x1+w2x2 = w0 + $w^t$a</p>
 <p>那么我们如何获得感知器的权值呢？这需要根据训练集是否可分来采用不同的方法：</p>
 <p>1、训练集线性可分时 –&gt; 感知器训练法则</p>
 <p>　　为了得到可接受的权值，通常从随机的权值开始，然后利用训练集反复训练权值，最后得到能够正确分类所有样例的权向量。</p>
@@ -658,6 +658,23 @@
 </script>
 
 
-  </div>
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
