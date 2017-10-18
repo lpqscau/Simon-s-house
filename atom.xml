@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-18T11:43:58.144Z</updated>
+  <updated>2017-10-18T11:48:58.758Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -16,17 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>感知机算法</title>
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/test-math/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/test-math/</id>
-    <published>2017-10-18T11:43:58.144Z</published>
-    <updated>2017-10-18T11:43:58.144Z</updated>
+    <published>2017-10-18T09:10:06.000Z</published>
+    <updated>2017-10-18T11:48:58.758Z</updated>
     
-    <content type="html"><![CDATA[<p>title: 感知机算法<br>date: 2017-10-18 17:10:06<br>mathjax: true<br>tags:</p>
-<pre><code>- machine learning
-- program
-- ML
-</code></pre><p>感知机算法-PLA-Proceptron Learning Algorithm</p>
+    <content type="html"><![CDATA[<p>感知机算法-PLA-Proceptron Learning Algorithm</p>
 <p>感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行</p>
 <p>sign ($w^t*a$) &gt; v</p>
 <p>sign($w^t*a$) &gt; v</p>
@@ -52,17 +48,19 @@
     
     <summary type="html">
     
-      &lt;p&gt;title: 感知机算法&lt;br&gt;date: 2017-10-18 17:10:06&lt;br&gt;mathjax: true&lt;br&gt;tags:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- machine learning
-- program
-- ML
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;感知机算法-PLA-Proceptron Learning Algorithm&lt;/p&gt;
+      &lt;p&gt;感知机算法-PLA-Proceptron Learning Algorithm&lt;/p&gt;
 &lt;p&gt;感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行&lt;/p&gt;
 &lt;p&gt;sign ($w^t*a$) &amp;gt; v&lt;/p&gt;
 &lt;p&gt;sign($w^t*a$) &amp;gt; v&lt;/p&gt;
     
     </summary>
     
+    
+      <category term="program" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/program/"/>
+    
+      <category term="machine learning" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/machine-learning/"/>
+    
+      <category term="ML" scheme="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/tags/ML/"/>
     
   </entry>
   
