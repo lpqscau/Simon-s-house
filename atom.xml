@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-18T11:34:46.082Z</updated>
+  <updated>2017-10-19T02:49:39.707Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/%E6%84%9F%E7%9F%A5%E6%9C%BA%E7%AE%97%E6%B3%95/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/18/感知机算法/</id>
     <published>2017-10-18T09:10:06.000Z</published>
-    <updated>2017-10-18T11:34:46.082Z</updated>
+    <updated>2017-10-19T02:49:39.707Z</updated>
     
     <content type="html"><![CDATA[<h3 id="感知机算法-PLA-Proceptron-Learning-Algorithm"><a href="#感知机算法-PLA-Proceptron-Learning-Algorithm" class="headerlink" title="感知机算法-PLA-Proceptron Learning Algorithm"></a>感知机算法-PLA-Proceptron Learning Algorithm</h3><p>感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行</p>
 <p>sign ($w^t$*a) &gt; v</p>
@@ -34,7 +34,8 @@
 <p>我们的判别方式是sign ($w^t$*a) &gt; v</p>
 <p>为了计算方便，我们不妨记增广向量$a^`$ =[x0,x1,x2]=[1,x1,x2] (x0恒为1，事实上x0是常数就ok)</p>
 <p>则$w^`$ =[w0,w1,w2]</p>
-<p>则$w^<code>t$*$a^</code>$  = w0x0+w1x1+w2x2 = w0+w1x1+w2x2 = w0 + $w^t$a</p>
+<p>则$w^T$’*$a^`$  = w0x0+w1x1+w2x2 = w0+w1x1+w2x2 = w0 + $w^t$a</p>
+<p>所以最终迭代得出的$w_0$就是我们得到的threshold,所以使用增广向量的方法可以把判断的步骤去掉,直接转化为向量运算,非常便于编程实现和计算机计算.</p>
 <p>那么我们如何获得感知器的权值呢？这需要根据训练集是否可分来采用不同的方法：</p>
 <p>1、训练集线性可分时 —&gt; 感知器训练法则</p>
 <p>　　为了得到可接受的权值，通常从随机的权值开始，然后利用训练集反复训练权值，最后得到能够正确分类所有样例的权向量。</p>
