@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Simon-s-house">
 <meta property="og:description" content="使博客支持数学公式渲染一波三折更换引擎一开始直接看网上教程卸载原来的渲染引擎，安装新引擎
 12npm uninstall hexo-renderer-marked --savenpm install hexo-renderer-pandoc --save">
-<meta property="og:updated_time" content="2017-10-19T08:49:43.575Z">
+<meta property="og:updated_time" content="2017-10-19T09:03:22.575Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客支持数学公式">
 <meta name="twitter:description" content="使博客支持数学公式渲染一波三折更换引擎一开始直接看网上教程卸载原来的渲染引擎，安装新引擎
@@ -282,12 +282,11 @@
 <p>不要嫌麻烦，之所以要在文章头里设置开关，是因为考虑只有在用到公式的页面才加载 Mathjax，这样不需要渲染数学公式的页面的访问速度就不会受到影响了。</p>
 <h4 id="查找问题"><a href="#查找问题" class="headerlink" title="查找问题"></a>查找问题</h4><h5 id="1-究竟用什么引擎渲染的？"><a href="#1-究竟用什么引擎渲染的？" class="headerlink" title="1.究竟用什么引擎渲染的？"></a>1.究竟用什么引擎渲染的？</h5><p><code>hexo -g</code> 的时候看到 <code>engine:mathjax</code> 所以引擎是对的</p>
 <h5 id="2-究竟有渲染吗？"><a href="#2-究竟有渲染吗？" class="headerlink" title="2.究竟有渲染吗？"></a>2.究竟有渲染吗？</h5><p>博客生成之后 $$ 都被解释了，证明大概是有渲染的，但是里面的公式全都没有渲染出来，奇怪！</p>
-<h5 id="2-和插件有关系吗"><a href="#2-和插件有关系吗" class="headerlink" title="2. 和插件有关系吗"></a>2. 和插件有关系吗</h5><figure class="highlight plain"><figcaption><span>math install```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">一直没有成功，所以想难道是插件没装成功，直接去github搜hexo-pugins/mathjax</div><div class="line"></div><div class="line">在readme看到原来现在也不用上面那样`math install` 了，而且也支持一个好像叫什么`katex`的渲染引擎了 ，不过没关系，重点了来了，原来要在博客配置文件开启`math`</div><div class="line"></div><div class="line">所以在博客配置文件加上下面，大功告成</div></pre></td></tr></table></figure>
-<p>math:<br>  engine: ‘mathjax’ # or ‘katex’<br>  mathjax:<br>    src: custom_mathjax_source<br>    config:</p>
-<pre><code>  # MathJax config
-</code></pre><p>  katex:<br>    css: custom_css_source<br>    js: custom_js_source # not used<br>    config:</p>
-<pre><code>  # KaTeX config
-</code></pre><p>```</p>
+<h5 id="2-和插件有关系吗"><a href="#2-和插件有关系吗" class="headerlink" title="2. 和插件有关系吗"></a>2. 和插件有关系吗</h5><figure class="highlight plain"><figcaption><span>math install</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo math install</div></pre></td></tr></table></figure>
+<p>一直没有成功，所以想难道是插件没装成功，直接去github搜hexo-pugins/mathjax</p>
+<p>在readme看到原来现在也不用上面那样<code>math install</code> 了，而且也支持一个好像叫什么<code>katex</code>的渲染引擎了 ，不过没关系，重点了来了，原来要在博客配置文件开启<code>math</code></p>
+<p>所以在博客配置文件加上下面，大功告成</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="attr">math:</span></div><div class="line"><span class="attr">  engine:</span> <span class="string">'mathjax'</span> <span class="comment"># or 'katex'</span></div><div class="line"><span class="attr">  mathjax:</span></div><div class="line"><span class="attr">    src:</span> <span class="string">custom_mathjax_source</span></div><div class="line"><span class="attr">    config:</span></div><div class="line">      <span class="comment"># MathJax config</span></div><div class="line"><span class="attr">  katex:</span></div><div class="line"><span class="attr">    css:</span> <span class="string">custom_css_source</span></div><div class="line"><span class="attr">    js:</span> <span class="string">custom_js_source</span> <span class="comment"># not used</span></div><div class="line"><span class="attr">    config:</span></div><div class="line">      <span class="comment"># KaTeX config</span></div></pre></td></tr></table></figure>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
 <li>学点前端还是有用的，不然光靠看别人的经验贴，也不知道原理</li>
 <li>为了防止看到过时的经验贴，最好先看原作者最新的说明文档readme </li>
@@ -342,7 +341,7 @@
         <p><span>本文标题:</span><a href="/Simon-s-house/2017/10/19/博客支持数学公式/">博客支持数学公式</a></p>
         <p><span>文章作者:</span><a href="/Simon-s-house/" title="访问 Simon 的个人博客">Simon</a></p>
         <p><span>发布时间:</span>2017年10月19日 - 11时06分</p>
-        <p><span>最后更新:</span>2017年10月19日 - 16时49分</p>
+        <p><span>最后更新:</span>2017年10月19日 - 17时03分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/Simon-s-house/2017/10/19/博客支持数学公式/" title="博客支持数学公式">https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/10/19/博客支持数学公式/</a>
             <span class="copy-path" data-clipboard-text="原文: https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/10/19/博客支持数学公式/　　作者: Simon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
