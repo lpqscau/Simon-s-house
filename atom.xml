@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-19T05:44:45.287Z</updated>
+  <updated>2017-10-19T08:49:43.575Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/19/%E5%8D%9A%E5%AE%A2%E6%94%AF%E6%8C%81%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/19/博客支持数学公式/</id>
     <published>2017-10-19T03:06:26.000Z</published>
-    <updated>2017-10-19T05:44:45.287Z</updated>
+    <updated>2017-10-19T08:49:43.575Z</updated>
     
     <content type="html"><![CDATA[<h2 id="使博客支持数学公式渲染"><a href="#使博客支持数学公式渲染" class="headerlink" title="使博客支持数学公式渲染"></a>使博客支持数学公式渲染</h2><h3 id="一波三折"><a href="#一波三折" class="headerlink" title="一波三折"></a>一波三折</h3><h4 id="更换引擎"><a href="#更换引擎" class="headerlink" title="更换引擎"></a>更换引擎</h4><p>一开始直接看网上教程卸载原来的渲染引擎，安装新引擎</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">uninstall</span> hexo-renderer-marked <span class="comment">--save</span></div><div class="line">npm <span class="keyword">install</span> hexo-renderer-pandoc <span class="comment">--save</span></div></pre></td></tr></table></figure>
@@ -54,6 +54,7 @@
 <li>为了防止看到过时的经验贴，最好先看原作者最新的说明文档readme </li>
 <li>实在不行的时候，去国内外网站提问</li>
 </ol>
+<p><a href="https://github.com/hexojs/hexo-math">hexo-math</a></p>
 ]]></content>
     
     <summary type="html">
