@@ -251,26 +251,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="使博客支持数学公式渲染"><a href="#使博客支持数学公式渲染" class="headerlink" title="使博客支持数学公式渲染"></a>使博客支持数学公式渲染</h2><h3 id="一波三折"><a href="#一波三折" class="headerlink" title="一波三折"></a>一波三折</h3><h4 id="更换引擎"><a href="#更换引擎" class="headerlink" title="更换引擎"></a>更换引擎</h4><p>一开始直接看网上教程卸载原来的渲染引擎，安装新引擎</p>
+              <h2 id="使博客支持数学公式渲染"><a href="#使博客支持数学公式渲染" class="headerlink" title="使博客支持数学公式渲染"></a>使博客支持数学公式渲染</h2><h3 id="一波三折"><a href="#一波三折" class="headerlink" title="一波三折"></a>一波三折</h3><h4 id="更换引擎"><a href="#更换引擎" class="headerlink" title="更换引擎"></a>更换引擎</h4><p>一开始直接看网上教程卸载原来的渲染引擎，安装新引擎</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">uninstall</span> hexo-renderer-marked <span class="comment">--save</span></div><div class="line">npm <span class="keyword">install</span> hexo-renderer-pandoc <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p>也有的说安装下面这个引擎</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-renderer-kramed <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p>还有的说要在博客根目录安装插件</p>
-<h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo math <span class="keyword">install</span></div></pre></td></tr></table></figure>
-<p>但是我安装失败了</p>
-<p>然后又看到说要在主题配置文件开启</p>
-<h4 id="主题配置文件开启"><a href="#主题配置文件开启" class="headerlink" title="主题配置文件开启"></a>主题配置文件开启</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># MathJax Support</span></div><div class="line"><span class="attr">mathjax:</span></div><div class="line"><span class="attr">  enable:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  per_page:</span> <span class="literal">true</span></div></pre></td></tr></table></figure>
-<h4 id="行内公式匹配问题"><a href="#行内公式匹配问题" class="headerlink" title="行内公式匹配问题"></a>行内公式匹配问题</h4><p>有的还说mathjax渲染行内公式可能出错，</p>
-<p>接下来到博客根目录下，找到node_modules\kramed\lib\rules\inline.js</p>
-<p>把第11行的escape变量的值做相应的修改：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//  escape: /^\\([<span class="string">\\`*&#123;&#125;\[\</span>](<span class="link"></span>)#$+\-.!_&gt;])/,</div><div class="line">  escape: /^\\([<span class="string">`*\[\</span>](<span class="link"></span>)#$+\-.!_&gt;])/</div></pre></td></tr></table></figure>
-<p>这一步是在原基础上取消了对\,{,}的转义(escape)。<br>同时把第20行的em变量也要做相应的修改。</p>
-<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//  em: /^<span class="symbol">\b</span>_((?:__|[<span class="symbol">\s</span><span class="symbol">\S</span>])+?)_<span class="symbol">\b</span>|^<span class="symbol">\*</span>((?:<span class="symbol">\*</span><span class="symbol">\*</span>|[<span class="symbol">\s</span><span class="symbol">\S</span>])+?)<span class="symbol">\*</span>(?!<span class="symbol">\*</span>)/,</div><div class="line">  em: /^<span class="symbol">\*</span>((?:<span class="symbol">\*</span><span class="symbol">\*</span>|[<span class="symbol">\s</span><span class="symbol">\S</span>])+?)<span class="symbol">\*</span>(?!<span class="symbol">\*</span>)/</div></pre></td></tr></table></figure>
-<h4 id="博客头声明开启"><a href="#博客头声明开启" class="headerlink" title="博客头声明开启"></a>博客头声明开启</h4><p>这样还不够，还需要在文章的Front-matter里打开mathjax开关，如下：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">title:</span> <span class="string">index.html</span></div><div class="line"><span class="attr">date:</span> <span class="number">2016</span><span class="bullet">-12</span><span class="bullet">-28</span> <span class="number">21</span><span class="string">:01:30</span></div><div class="line"><span class="attr">tags:</span></div><div class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></div><div class="line"><span class="bullet">-</span><span class="bullet">-</span></div></pre></td></tr></table></figure>
-<p>不要嫌麻烦，之所以要在文章头里设置开关，是因为考虑只有在用到公式的页面才加载 Mathjax，这样不需要渲染数学公式的页面的访问速度就不会受到影响了。</p>
-<h4 id="查找问题"><a href="#查找问题" class="headerlink" title="查找问题"></a>查找问题</h4><h5 id="1-究竟用什么引擎渲染的？"><a href="#1-究竟用什么引擎渲染的？" class="headerlink" title="1.究竟用什么引擎渲染的？"></a>1.究竟用什么引擎渲染的？</h5><p><code>hexo -g</code> 的时候看到 <code>engine:mathjax</code> 所以引擎是对的</p>
-<h5 id="2-和插件有关系吗"><a href="#2-和插件有关系吗" class="headerlink" title="2. 和插件有关系吗"></a>2. 和插件有关系吗</h5>
+          
       
       
     </div>
@@ -284,6 +267,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/hexo/">hexo</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/Simon-s-house/2017/10/19/博客支持数学公式/#more">read more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

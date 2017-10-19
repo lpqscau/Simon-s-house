@@ -6,30 +6,18 @@
   <title>博客支持数学公式 | Simon-s-house</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="使博客支持数学公式渲染一波三折更换引擎一开始直接看网上教程卸载原来的渲染引擎，安装新引擎
-12npm uninstall hexo-renderer-marked --savenpm install hexo-renderer-pandoc --save
-也有的说安装下面这个引擎
-1npm install hexo-renderer-kramed --save
-还有的说要在博客根目录安装插件
-安装">
+12npm uninstall hexo-renderer-marked --savenpm install hexo-renderer-pandoc --save">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客支持数学公式">
 <meta property="og:url" content="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/19/博客支持数学公式/index.html">
 <meta property="og:site_name" content="Simon-s-house">
 <meta property="og:description" content="使博客支持数学公式渲染一波三折更换引擎一开始直接看网上教程卸载原来的渲染引擎，安装新引擎
-12npm uninstall hexo-renderer-marked --savenpm install hexo-renderer-pandoc --save
-也有的说安装下面这个引擎
-1npm install hexo-renderer-kramed --save
-还有的说要在博客根目录安装插件
-安装">
-<meta property="og:updated_time" content="2017-10-19T03:41:20.009Z">
+12npm uninstall hexo-renderer-marked --savenpm install hexo-renderer-pandoc --save">
+<meta property="og:updated_time" content="2017-10-19T05:44:45.287Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客支持数学公式">
 <meta name="twitter:description" content="使博客支持数学公式渲染一波三折更换引擎一开始直接看网上教程卸载原来的渲染引擎，安装新引擎
-12npm uninstall hexo-renderer-marked --savenpm install hexo-renderer-pandoc --save
-也有的说安装下面这个引擎
-1npm install hexo-renderer-kramed --save
-还有的说要在博客根目录安装插件
-安装">
+12npm uninstall hexo-renderer-marked --savenpm install hexo-renderer-pandoc --save">
   
     <link rel="alternative" href="/atom.xml" title="Simon-s-house" type="application/atom+xml">
   
@@ -275,6 +263,7 @@
           
         <h2 id="使博客支持数学公式渲染"><a href="#使博客支持数学公式渲染" class="headerlink" title="使博客支持数学公式渲染"></a>使博客支持数学公式渲染</h2><h3 id="一波三折"><a href="#一波三折" class="headerlink" title="一波三折"></a>一波三折</h3><h4 id="更换引擎"><a href="#更换引擎" class="headerlink" title="更换引擎"></a>更换引擎</h4><p>一开始直接看网上教程卸载原来的渲染引擎，安装新引擎</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">uninstall</span> hexo-renderer-marked <span class="comment">--save</span></div><div class="line">npm <span class="keyword">install</span> hexo-renderer-pandoc <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>也有的说安装下面这个引擎</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-renderer-kramed <span class="comment">--save</span></div></pre></td></tr></table></figure>
 <p>还有的说要在博客根目录安装插件</p>
@@ -292,7 +281,19 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">title:</span> <span class="string">index.html</span></div><div class="line"><span class="attr">date:</span> <span class="number">2016</span><span class="bullet">-12</span><span class="bullet">-28</span> <span class="number">21</span><span class="string">:01:30</span></div><div class="line"><span class="attr">tags:</span></div><div class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></div><div class="line"><span class="bullet">-</span><span class="bullet">-</span></div></pre></td></tr></table></figure>
 <p>不要嫌麻烦，之所以要在文章头里设置开关，是因为考虑只有在用到公式的页面才加载 Mathjax，这样不需要渲染数学公式的页面的访问速度就不会受到影响了。</p>
 <h4 id="查找问题"><a href="#查找问题" class="headerlink" title="查找问题"></a>查找问题</h4><h5 id="1-究竟用什么引擎渲染的？"><a href="#1-究竟用什么引擎渲染的？" class="headerlink" title="1.究竟用什么引擎渲染的？"></a>1.究竟用什么引擎渲染的？</h5><p><code>hexo -g</code> 的时候看到 <code>engine:mathjax</code> 所以引擎是对的</p>
-<h5 id="2-和插件有关系吗"><a href="#2-和插件有关系吗" class="headerlink" title="2. 和插件有关系吗"></a>2. 和插件有关系吗</h5>
+<h5 id="2-究竟有渲染吗？"><a href="#2-究竟有渲染吗？" class="headerlink" title="2.究竟有渲染吗？"></a>2.究竟有渲染吗？</h5><p>博客生成之后 $$ 都被解释了，证明大概是有渲染的，但是里面的公式全都没有渲染出来，奇怪！</p>
+<h5 id="2-和插件有关系吗"><a href="#2-和插件有关系吗" class="headerlink" title="2. 和插件有关系吗"></a>2. 和插件有关系吗</h5><figure class="highlight plain"><figcaption><span>math install```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">一直没有成功，所以想难道是插件没装成功，直接去github搜hexo-pugins/mathjax</div><div class="line"></div><div class="line">在readme看到原来现在也不用上面那样`math install` 了，而且也支持一个好像叫什么`katex`的渲染引擎了 ，不过没关系，重点了来了，原来要在博客配置文件开启`math`</div><div class="line"></div><div class="line">所以在博客配置文件加上下面，大功告成</div></pre></td></tr></table></figure>
+<p>math:<br>  engine: ‘mathjax’ # or ‘katex’<br>  mathjax:<br>    src: custom_mathjax_source<br>    config:</p>
+<pre><code>  # MathJax config
+</code></pre><p>  katex:<br>    css: custom_css_source<br>    js: custom_js_source # not used<br>    config:</p>
+<pre><code>  # KaTeX config
+</code></pre><p>```</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
+<li>学点前端还是有用的，不然光靠看别人的经验贴，也不知道原理</li>
+<li>为了防止看到过时的经验贴，最好先看原作者最新的说明文档readme </li>
+<li>实在不行的时候，去国内外网站提问</li>
+</ol>
+
       
       
         <div class="page-reward">
@@ -340,7 +341,7 @@
         <p><span>本文标题:</span><a href="/Simon-s-house/2017/10/19/博客支持数学公式/">博客支持数学公式</a></p>
         <p><span>文章作者:</span><a href="/Simon-s-house/" title="访问 Simon 的个人博客">Simon</a></p>
         <p><span>发布时间:</span>2017年10月19日 - 11时06分</p>
-        <p><span>最后更新:</span>2017年10月19日 - 11时41分</p>
+        <p><span>最后更新:</span>2017年10月19日 - 13时44分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/Simon-s-house/2017/10/19/博客支持数学公式/" title="博客支持数学公式">https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/10/19/博客支持数学公式/</a>
             <span class="copy-path" data-clipboard-text="原文: https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/10/19/博客支持数学公式/　　作者: Simon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -369,7 +370,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使博客支持数学公式渲染"><span class="toc-number">1.</span> <span class="toc-text">使博客支持数学公式渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一波三折"><span class="toc-number">1.1.</span> <span class="toc-text">一波三折</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#更换引擎"><span class="toc-number">1.1.1.</span> <span class="toc-text">更换引擎</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装插件"><span class="toc-number">1.1.2.</span> <span class="toc-text">安装插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#主题配置文件开启"><span class="toc-number">1.1.3.</span> <span class="toc-text">主题配置文件开启</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#行内公式匹配问题"><span class="toc-number">1.1.4.</span> <span class="toc-text">行内公式匹配问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#博客头声明开启"><span class="toc-number">1.1.5.</span> <span class="toc-text">博客头声明开启</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查找问题"><span class="toc-number">1.1.6.</span> <span class="toc-text">查找问题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-究竟用什么引擎渲染的？"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">1.究竟用什么引擎渲染的？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-和插件有关系吗"><span class="toc-number">1.1.6.2.</span> <span class="toc-text">2. 和插件有关系吗</span></a></li></ol></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使博客支持数学公式渲染"><span class="toc-number">1.</span> <span class="toc-text">使博客支持数学公式渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一波三折"><span class="toc-number">1.1.</span> <span class="toc-text">一波三折</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#更换引擎"><span class="toc-number">1.1.1.</span> <span class="toc-text">更换引擎</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装插件"><span class="toc-number">1.1.2.</span> <span class="toc-text">安装插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#主题配置文件开启"><span class="toc-number">1.1.3.</span> <span class="toc-text">主题配置文件开启</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#行内公式匹配问题"><span class="toc-number">1.1.4.</span> <span class="toc-text">行内公式匹配问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#博客头声明开启"><span class="toc-number">1.1.5.</span> <span class="toc-text">博客头声明开启</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查找问题"><span class="toc-number">1.1.6.</span> <span class="toc-text">查找问题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-究竟用什么引擎渲染的？"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">1.究竟用什么引擎渲染的？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-究竟有渲染吗？"><span class="toc-number">1.1.6.2.</span> <span class="toc-text">2.究竟有渲染吗？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-和插件有关系吗"><span class="toc-number">1.1.6.3.</span> <span class="toc-text">2. 和插件有关系吗</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">1.2.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
