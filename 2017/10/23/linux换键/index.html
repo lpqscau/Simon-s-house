@@ -5,16 +5,28 @@
   
   <title>linux换键 | Simon-s-house</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="xmodmap原理及使用指南">
+  <meta name="description" content="xmodmap原理及使用指南1.什么是xmodmapxmodmap 是一个在 X 图形环境下用于修改键盘和鼠标按钮映射的工具。比如你可以使用它来实现鼠标的左右键互换，把 caps lock 键改成 ctrl 键， a 键改成 b 键等。
+在介绍 xmodmap 的使用方法之前，先介绍一下系统是如何处理键盘的输入的。
+
+键盘中的一个按键被按下时，会产生一个“信号”传给操作系统。
+操作系统得到这个信号">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux换键">
 <meta property="og:url" content="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/23/linux换键/index.html">
 <meta property="og:site_name" content="Simon-s-house">
-<meta property="og:description" content="xmodmap原理及使用指南">
-<meta property="og:updated_time" content="2017-10-23T00:01:36.830Z">
+<meta property="og:description" content="xmodmap原理及使用指南1.什么是xmodmapxmodmap 是一个在 X 图形环境下用于修改键盘和鼠标按钮映射的工具。比如你可以使用它来实现鼠标的左右键互换，把 caps lock 键改成 ctrl 键， a 键改成 b 键等。
+在介绍 xmodmap 的使用方法之前，先介绍一下系统是如何处理键盘的输入的。
+
+键盘中的一个按键被按下时，会产生一个“信号”传给操作系统。
+操作系统得到这个信号">
+<meta property="og:updated_time" content="2017-10-23T02:23:07.803Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux换键">
-<meta name="twitter:description" content="xmodmap原理及使用指南">
+<meta name="twitter:description" content="xmodmap原理及使用指南1.什么是xmodmapxmodmap 是一个在 X 图形环境下用于修改键盘和鼠标按钮映射的工具。比如你可以使用它来实现鼠标的左右键互换，把 caps lock 键改成 ctrl 键， a 键改成 b 键等。
+在介绍 xmodmap 的使用方法之前，先介绍一下系统是如何处理键盘的输入的。
+
+键盘中的一个按键被按下时，会产生一个“信号”传给操作系统。
+操作系统得到这个信号">
   
     <link rel="alternative" href="/atom.xml" title="Simon-s-house" type="application/atom+xml">
   
@@ -258,7 +270,73 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="xmodmap原理及使用指南"><a href="#xmodmap原理及使用指南" class="headerlink" title="xmodmap原理及使用指南"></a>xmodmap原理及使用指南</h3>
+        <h3 id="xmodmap原理及使用指南"><a href="#xmodmap原理及使用指南" class="headerlink" title="xmodmap原理及使用指南"></a>xmodmap原理及使用指南</h3><h4 id="1-什么是xmodmap"><a href="#1-什么是xmodmap" class="headerlink" title="1.什么是xmodmap"></a>1.什么是xmodmap</h4><p>xmodmap 是一个在 X 图形环境下用于修改键盘和鼠标按钮映射的工具。比如你可以使用它来实现鼠标的左右键互换，把 caps lock 键改成 ctrl 键， a 键改成 b 键等。</p>
+<p>在介绍 xmodmap 的使用方法之前，先介绍一下系统是如何处理键盘的输入的。</p>
+<ul>
+<li>键盘中的一个按键被按下时，会产生一个“信号”传给操作系统。</li>
+<li>操作系统得到这个信号之后，检查此信号对应的处理方法。</li>
+<li>执行对应的处理方法。</li>
+<li><a id="more"></a>
+</li>
+</ul>
+<p>上面的流程当中，键盘某键产生的信号是不可变的，就是我们后面会提到的 keycode 是不会变的。你按不同的键，实际上可以看成是传入了不同的 keycode ，至于这些 keycode 要做什么事那是后话。也就是说，你按下了键盘上的 a 键与是否输入了一个 a ，它们之间是没有必然联系的。同时，那些操作系统当中对不同信号设置的处理方法也是没法直接改变的。而唯一可以改变的，就是它们之间的映射关系。这也是 xmodmap 它要做的事。</p>
+<p>第二步，操作系统得到键盘输入的信号之后，就去检查对应的处理方法。这个处理方法已经预置了一套，比如键盘的上 a 键产生的 keycode 对应的处理方法就是输入一个 a 。我们也可以根据自己的需求，把 a 产生的 keycode 让它对应到另外一个处理方法上去，比如输入的是一个 b 。</p>
+<p>我们可以使用 xev 这个工具来获取不同按钮产生的 keycode ，比如 a 这个按钮产生的 keycode 是 28， <code>tab</code> 键产生的 keycode 是 23。</p>
+<h4 id="2-改变按键的行为"><a href="#2-改变按键的行为" class="headerlink" title="2.改变按键的行为"></a>2.改变按键的行为</h4><p>我们先看普通键的行为如何被更改。之前后再介绍修饰键，比如 <code>ctrl</code> 键的行为如何修改。</p>
+<p>假如我们希望得到的一个效果是，按下 a 按键，但是却是输入一个 b。</p>
+<p>根据前面的介绍，我们要做的事，只是把 a 按键对应的处理方法，改成和 b 按键的一样就可以了。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap</span> -e <span class="string">'keycode 38 = b'</span></div></pre></td></tr></table></figure>
+<p>xmodmbp 使用 -e 参数后面跟一个表达式来实现相应的修改。</p>
+<p>keycode 的作用是将一个按键与一串处理方法绑定，是一串方法，不是一个，即：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap</span> -e <span class="string">'keycode 38 = b E'</span></div></pre></td></tr></table></figure>
+<p>像这样一样，以空格分割，写多个处理方法。根据文档，你最多可以写8个处理方法，但是，一般只有前4个为可用的，第2个指定的是按住 <code>shift</code> 键时如何处理（第3个和第4个说的修饰键没接触过）。上面的代码的效果就是，直接按 a 键会输入一个 b ，按住 shift 键再按 a 键就是输入一个 E，大写的。</p>
+<p>上面写的 b E 是两个处理方法，实际上，处理方法都是以整数表示的，在 xev 的输出中也可以看到， b 对应的是 0x62 ，而 E 对应的是 0x45 ，所以，上面的代码也可以写成：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmodmap -e 'keycode <span class="number">38</span> = <span class="number">0x62</span> <span class="number">0x45</span>'</div></pre></td></tr></table></figure>
+<p>完整的处理方法数值列表，可以在 X11/keysymdef.h 这个文件中找到。</p>
+<p>另外一种修改按键行为的方法是使用 keysym 来转换预定义的处理方法。比如把 0x62 这个处理方法转换成 0x63 ：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmodmap -e 'keysym <span class="number">0x62</span> = <span class="number">0x63</span>'</div></pre></td></tr></table></figure>
+<p>这段代码与下面等价：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap</span> -e <span class="string">'keysym b = c'</span></div></pre></td></tr></table></figure>
+<p>效果与下面的等价：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap</span> -e <span class="string">'keycode 56 = c'</span></div></pre></td></tr></table></figure>
+<h4 id="改变修饰键的行为"><a href="#改变修饰键的行为" class="headerlink" title="改变修饰键的行为"></a>改变修饰键的行为</h4><p>修饰键指的就是像 <code>ctrl</code> ， <code>alt</code> 等这些键。一般是按住它们再去按其它键以产生不同的效果。前面也提到，绑定到某个按键的处理方法是一串，而不是一个。针对修饰键的处理，也是一个绑定的过程。具体一点，就是把一些处理方法绑定到特定的装饰方法当中。比如把左边那个 <code>ctrl</code> 键对应的 0xffe3 这个处理方法绑定到 <code>control</code> 这个装饰方法当中。当然，一个装饰方法中，可以有多个普通方法，左 <code>ctrl</code> 和右 <code>ctrl</code> 就是两个，你也可以添加你自己的。</p>
+<p>我们先使用：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap -pm</span></div></pre></td></tr></table></figure>
+<p>来查看装饰方法的情况。比如我现在的是这样：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">shift       Shift_L (<span class="number">0x32</span>),  Shift_R (<span class="number">0x3e</span>)</div><div class="line">lock      </div><div class="line"><span class="section">control</span>     Control_L (<span class="number">0x25</span>),  Control_L (<span class="number">0x42</span>),  Control_R (<span class="number">0x69</span>)</div><div class="line">mod1        Alt_L (<span class="number">0x40</span>),  Alt_R (<span class="number">0x6c</span>),  Meta_L (<span class="number">0xcd</span>)</div><div class="line">mod2        Num_Lock (<span class="number">0x4d</span>)</div><div class="line">mod3      </div><div class="line">mod4        Super_L (<span class="number">0x85</span>),  Super_R (<span class="number">0x86</span>),  Super_L (<span class="number">0xce</span>),  Hyper_L (<span class="number">0xcf</span>)</div><div class="line">mod5        ISO_Level3_Shift (<span class="number">0x5c</span>),  Mode_switch (<span class="number">0xcb</span>)</div></pre></td></tr></table></figure>
+<p>可以看到，系统定义了 <code>shift</code>, <code>lock</code>, <code>control</code>, <code>mod1</code>, <code>mod2</code>, <code>mod3</code>, <code>mod4</code>, <code>mod5</code> 这8种装饰方法。 <code>shift</code> 一般对应 Shift <code>键，lock</code> 对应 caps lock键，我已经把它干掉了。<code>control</code> 对应左右的 ctrl 键， <code>mod1</code> 就是 alt 键了。通过 xev 程序，我得到我键盘上的那个 win 键对应的处理方法是 <code>mod4</code> 中的 Super_L 。</p>
+<p>上面右键的处理方法后面括号中的数字，是表示的 keycode ，因为相同的处理方法可能是由不同的按键，即不同的 keycode 产生出来的。</p>
+<p>要修改装饰键的行为，一般分成两步：</p>
+<ol>
+<li>将一个按键的处理方法改成已有几种特殊方法，像 Control_L 这些。（这步不是必须的，但是如果你把一个像 a 这种处理方法绑定到修饰方法上，会出问题，后面会尝试）</li>
+<li>把一种处理方法绑定到修饰方法上。</li>
+</ol>
+<p>我们以 <code>shift</code> 这个修饰为例来说明。把指定处理方法绑定到修饰方法上，使用 add 来添加一个修饰方法绑定，比如：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap</span> -e <span class="string">'add shift = a'</span></div></pre></td></tr></table></figure>
+<p>这样， a 这个处理方法就会被当成 <code>shift</code> 修饰方法来用了。而因为默认地， a 这个处理方法，是由产生 keycode 为38的 a 按键触发的，所以，现在，当你按住 a 键，再按其它键时，就会……，挂掉，嗯，不错，就会挂掉。我不知道为什么。不过别简单，我们可以把它从修饰方法中移除：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap</span> -e <span class="string">'remove shift = a'</span></div></pre></td></tr></table></figure>
+<p>这样就可以了。那我们拿键盘右侧的 menu 键来试试吧。从 xev 中可以获取到，右侧的这个“菜单键”，它的 keycode 是135，当前对应的处理方法是名为“Menu”的 0xff67 方法。那我们就把这个处理方法添加到 <code>shift</code> 修饰方法当中试试：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap</span> -e <span class="string">'add shift = Menu'</span></div></pre></td></tr></table></figure>
+<p>这样，当你按住“菜单键”时，就和按住左边的 Shift 键一样了，可以输入大写字母。当然，同时“菜单键”还有它原来的一些行为，比如会输入 $ 符号什么的。这也是为什么，我们如果要修改修饰键，那么最好使用已经定义的那几种专为修饰键预定的处理方法，以避免产生问题。</p>
+<p>所以，如果我们要完全把“菜单键”改成一个左 Shift 键，那么应该按上面提到的两个步骤做，首先：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap</span> -e <span class="string">'keycode 135 = Shift_L'</span></div></pre></td></tr></table></figure>
+<p>把它的处理方法改成 Shift_L ，而不使用原来的 Menu 。</p>
+<p>这时，可能有人会想，Shift_L 方法不是已经绑定到相应的 <code>shift</code> 这个装饰方法了嘛，那我们已经达到目的了？当然不是，绑定装饰方法的处理方法，是对应到具体的 keycode 的，左 Shift 键产生的 Shift_L 方法显然和我们刚才定义的菜单键产生的 Shift_L 方法是有区别的。我们刚才定义会产生的 Shift_L 方法还没有绑定到 <code>shift</code> 这个装饰方法上。所以，现在的表现为，菜单键已经不具有以前的行为了（比如弹出一个菜单什么的），但是，它还仍未拥有修饰键的作用，我们还需要绑定一下：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap</span> -e <span class="string">'add shift = Shift_L'</span></div></pre></td></tr></table></figure>
+<p>再次把所有的 Shift_L 处理方法都绑定到 <code>shift</code> 这个装饰方法上。现在使用：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap -pm</span></div></pre></td></tr></table></figure>
+<p>可以看到下面这一行：</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">shift </span>      <span class="keyword">Shift_L </span>(<span class="number">0x32</span>),  <span class="keyword">Shift_R </span>(<span class="number">0x3e</span>),  <span class="keyword">Shift_L </span>(<span class="number">0x87</span>)</div></pre></td></tr></table></figure>
+<p>0x87 就是 135 ，也就是我们刚才自己添加的那个“菜单键”，现在，这个菜单键就完全被改成一个左 Shift 键了。</p>
+<p>如果你是修改 caps lock 键的行为，那么记得需要使用 remove 把之前的修饰绑定移除：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">xmodmap</span> -e <span class="string">'remove lock = xxx'</span></div></pre></td></tr></table></figure>
+<h4 id="4-修改鼠标按键行为"><a href="#4-修改鼠标按键行为" class="headerlink" title="4.修改鼠标按键行为"></a>4.修改鼠标按键行为</h4><p>修改鼠标的按键行为就简单很多了，直接使用 pointer 顺序指定各个按键的处理方法。处理方法与默认的按键号是一致的，比如处理方法1，对应1号按键，处理方法2对应2号按键。（最多有12个按键绑定，我们下面只考虑前3个就好了）</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmodmap -e 'pointer = <span class="number">1</span> <span class="number">2</span> <span class="number">3</span>'</div></pre></td></tr></table></figure>
+<p>这样什么也不会发生，它就是默认的设置。如果要交换鼠标的左右键，只需要让1号按键（第一位）对应到3号处理方法，就3号按键（第三位）对应1号处理方法：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmodmap -e 'pointer = <span class="number">3</span> <span class="number">2</span> <span class="number">1</span>'</div></pre></td></tr></table></figure>
+<p>这样就实现了左右键互换。</p>
+<p>参考：<a href="http://blog.csdn.net/robertsong2004/article/details/36439597" target="_blank" rel="external">CSDN</a></p>
+
       
       
         <div class="page-reward">
@@ -306,7 +384,7 @@
         <p><span>本文标题:</span><a href="/Simon-s-house/2017/10/23/linux换键/">linux换键</a></p>
         <p><span>文章作者:</span><a href="/Simon-s-house/" title="访问 Simon 的个人博客">Simon</a></p>
         <p><span>发布时间:</span>2017年10月23日 - 08时00分</p>
-        <p><span>最后更新:</span>2017年10月23日 - 08时01分</p>
+        <p><span>最后更新:</span>2017年10月23日 - 10时23分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/Simon-s-house/2017/10/23/linux换键/" title="linux换键">https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/10/23/linux换键/</a>
             <span class="copy-path" data-clipboard-text="原文: https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/10/23/linux换键/　　作者: Simon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -335,7 +413,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#xmodmap原理及使用指南"><span class="toc-number">1.</span> <span class="toc-text">xmodmap原理及使用指南</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#xmodmap原理及使用指南"><span class="toc-number">1.</span> <span class="toc-text">xmodmap原理及使用指南</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是xmodmap"><span class="toc-number">1.1.</span> <span class="toc-text">1.什么是xmodmap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-改变按键的行为"><span class="toc-number">1.2.</span> <span class="toc-text">2.改变按键的行为</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#改变修饰键的行为"><span class="toc-number">1.3.</span> <span class="toc-text">改变修饰键的行为</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-修改鼠标按键行为"><span class="toc-number">1.4.</span> <span class="toc-text">4.修改鼠标按键行为</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
