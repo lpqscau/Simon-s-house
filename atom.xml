@@ -5,7 +5,7 @@
   <link href="/Simon-s-house/atom.xml" rel="self"/>
   
   <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/"/>
-  <updated>2017-10-23T04:39:08.888Z</updated>
+  <updated>2017-10-23T04:48:12.168Z</updated>
   <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/</id>
   
   <author>
@@ -20,12 +20,13 @@
     <link href="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/23/%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%A5%A5%E7%A7%98/"/>
     <id>https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/23/行列式的奥秘/</id>
     <published>2017-10-23T04:36:19.000Z</published>
-    <updated>2017-10-23T04:39:08.888Z</updated>
+    <updated>2017-10-23T04:48:12.168Z</updated>
     
     <content type="html"><![CDATA[<p>行列式这个“怪物”定义初看很奇怪，一堆逆序数什么的让人不免觉得恐惧，但其实它是有实际得不能更实际的物理意义的，<strong>理解只需要三步</strong>。这酸爽~</p>
 <p>1，行列式<img src="http://www.zhihu.com/equation?tex=det%28A%29" alt="det(A)">是针对一个<img src="http://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="n\times n">的矩阵<img src="http://www.zhihu.com/equation?tex=A" alt="A">而言的。<img src="http://www.zhihu.com/equation?tex=A" alt="A">表示一个<img src="http://www.zhihu.com/equation?tex=n" alt="n">维空间到<img src="http://www.zhihu.com/equation?tex=n" alt="n">维空间的线性变换。那么什么是线性变换呢？无非是一个压缩或拉伸啊。假想原来空间中有一个<img src="http://www.zhihu.com/equation?tex=n" alt="n">维的立方体（随便什么形状），其中立方体内的每一个点都经过这个线性变换，变成<img src="http://www.zhihu.com/equation?tex=n" alt="n">维空间中的一个新立方体。</p>
 <p>2，原来立方体有一个体积<img src="http://www.zhihu.com/equation?tex=V_%7B1%7D" alt="V_{1}">，新的立方体也有一个体积<img src="http://www.zhihu.com/equation?tex=V_%7B2%7D+" alt="V_{2} ">。</p>
 <p>3，行列式<img src="http://www.zhihu.com/equation?tex=det%28A%29" alt="det(A)">是一个数对不对？这个数其实就是 <img src="http://www.zhihu.com/equation?tex=V_%7B2%7D+" alt="V_{2} "><img src="http://www.zhihu.com/equation?tex=%5Cdiv+" alt="\div "><img src="http://www.zhihu.com/equation?tex=V_%7B1%7D+" alt="V_{1} ">   ，结束了。</p>
+<a id="more"></a>
 <p>就这么简单？没错，就这么简单。</p>
 <p>所以说：行列式的本质就是一句话：</p>
 <p><strong>行列式就是线性变换的放大率！</strong></p>
@@ -109,7 +110,9 @@
     <summary type="html">
     
       &lt;p&gt;行列式这个“怪物”定义初看很奇怪，一堆逆序数什么的让人不免觉得恐惧，但其实它是有实际得不能更实际的物理意义的，&lt;strong&gt;理解只需要三步&lt;/strong&gt;。这酸爽~&lt;/p&gt;
-&lt;p&gt;1，行列式&lt;img src=&quot;http://www.zhihu.com/equation?
+&lt;p&gt;1，行列式&lt;img src=&quot;http://www.zhihu.com/equation?tex=det%28A%29&quot; alt=&quot;det(A)&quot;&gt;是针对一个&lt;img src=&quot;http://www.zhihu.com/equation?tex=n%5Ctimes+n&quot; alt=&quot;n\times n&quot;&gt;的矩阵&lt;img src=&quot;http://www.zhihu.com/equation?tex=A&quot; alt=&quot;A&quot;&gt;而言的。&lt;img src=&quot;http://www.zhihu.com/equation?tex=A&quot; alt=&quot;A&quot;&gt;表示一个&lt;img src=&quot;http://www.zhihu.com/equation?tex=n&quot; alt=&quot;n&quot;&gt;维空间到&lt;img src=&quot;http://www.zhihu.com/equation?tex=n&quot; alt=&quot;n&quot;&gt;维空间的线性变换。那么什么是线性变换呢？无非是一个压缩或拉伸啊。假想原来空间中有一个&lt;img src=&quot;http://www.zhihu.com/equation?tex=n&quot; alt=&quot;n&quot;&gt;维的立方体（随便什么形状），其中立方体内的每一个点都经过这个线性变换，变成&lt;img src=&quot;http://www.zhihu.com/equation?tex=n&quot; alt=&quot;n&quot;&gt;维空间中的一个新立方体。&lt;/p&gt;
+&lt;p&gt;2，原来立方体有一个体积&lt;img src=&quot;http://www.zhihu.com/equation?tex=V_%7B1%7D&quot; alt=&quot;V_{1}&quot;&gt;，新的立方体也有一个体积&lt;img src=&quot;http://www.zhihu.com/equation?tex=V_%7B2%7D+&quot; alt=&quot;V_{2} &quot;&gt;。&lt;/p&gt;
+&lt;p&gt;3，行列式&lt;img src=&quot;http://www.zhihu.com/equation?tex=det%28A%29&quot; alt=&quot;det(A)&quot;&gt;是一个数对不对？这个数其实就是 &lt;img src=&quot;http://www.zhihu.com/equation?tex=V_%7B2%7D+&quot; alt=&quot;V_{2} &quot;&gt;&lt;img src=&quot;http://www.zhihu.com/equation?tex=%5Cdiv+&quot; alt=&quot;\div &quot;&gt;&lt;img src=&quot;http://www.zhihu.com/equation?tex=V_%7B1%7D+&quot; alt=&quot;V_{1} &quot;&gt;   ，结束了。&lt;/p&gt;
     
     </summary>
     
