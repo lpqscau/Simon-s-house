@@ -146,7 +146,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/Simon-s-house/tags/ML/" style="font-size: 10px;">ML</a> <a href="/Simon-s-house/tags/blog/" style="font-size: 15px;">blog</a> <a href="/Simon-s-house/tags/command/" style="font-size: 12.5px;">command</a> <a href="/Simon-s-house/tags/css/" style="font-size: 10px;">css</a> <a href="/Simon-s-house/tags/debate/" style="font-size: 15px;">debate</a> <a href="/Simon-s-house/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/Simon-s-house/tags/github/" style="font-size: 10px;">github</a> <a href="/Simon-s-house/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/Simon-s-house/tags/linux/" style="font-size: 10px;">linux</a> <a href="/Simon-s-house/tags/machine-learning/" style="font-size: 12.5px;">machine learning</a> <a href="/Simon-s-house/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/Simon-s-house/tags/program/" style="font-size: 20px;">program</a> <a href="/Simon-s-house/tags/python/" style="font-size: 10px;">python</a> <a href="/Simon-s-house/tags/realtime-system/" style="font-size: 10px;">realtime-system</a> <a href="/Simon-s-house/tags/test/" style="font-size: 10px;">test</a> <a href="/Simon-s-house/tags/uppaal/" style="font-size: 10px;">uppaal</a> <a href="/Simon-s-house/tags/随笔/" style="font-size: 10px;">随笔</a>
+                        <a href="/Simon-s-house/tags/FT/" style="font-size: 10px;">FT</a> <a href="/Simon-s-house/tags/Fourier-transformation/" style="font-size: 10px;">Fourier transformation</a> <a href="/Simon-s-house/tags/ML/" style="font-size: 10px;">ML</a> <a href="/Simon-s-house/tags/blog/" style="font-size: 15px;">blog</a> <a href="/Simon-s-house/tags/command/" style="font-size: 12.5px;">command</a> <a href="/Simon-s-house/tags/css/" style="font-size: 10px;">css</a> <a href="/Simon-s-house/tags/debate/" style="font-size: 15px;">debate</a> <a href="/Simon-s-house/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/Simon-s-house/tags/github/" style="font-size: 10px;">github</a> <a href="/Simon-s-house/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/Simon-s-house/tags/linear-algebra/" style="font-size: 10px;">linear algebra</a> <a href="/Simon-s-house/tags/linux/" style="font-size: 10px;">linux</a> <a href="/Simon-s-house/tags/machine-learning/" style="font-size: 12.5px;">machine learning</a> <a href="/Simon-s-house/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/Simon-s-house/tags/matrix/" style="font-size: 10px;">matrix</a> <a href="/Simon-s-house/tags/program/" style="font-size: 20px;">program</a> <a href="/Simon-s-house/tags/python/" style="font-size: 10px;">python</a> <a href="/Simon-s-house/tags/realtime-system/" style="font-size: 10px;">realtime-system</a> <a href="/Simon-s-house/tags/test/" style="font-size: 10px;">test</a> <a href="/Simon-s-house/tags/uppaal/" style="font-size: 10px;">uppaal</a> <a href="/Simon-s-house/tags/随笔/" style="font-size: 10px;">随笔</a>
                     </div>
                 </section>
                 
@@ -223,6 +223,72 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-github基础操作" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/Simon-s-house/2017/10/17/github基础操作/" class="article-date">
+      <time datetime="2017-10-16T16:58:00.000Z" itemprop="datePublished">2017-10-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Simon-s-house/2017/10/17/github基础操作/">github基础操作</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="SSH基础知识"><a href="#SSH基础知识" class="headerlink" title="SSH基础知识"></a>SSH基础知识</h3><blockquote>
+<p>简单说，SSH是一种网络协议，用于计算机之间的加密登录。<br>如果一个用户从本地计算机，使用SSH协议登录另一台远程计算机，我们就可以认为，这种登录是安全的，即使被中途截获，密码也不会泄露。<br>最早的时候，互联网通信都是明文通信，一旦被截获，内容就暴露无疑。1995年，芬兰学者Tatu Ylonen设计了SSH协议，将登录信息全部加密，成为互联网安全的一个基本解决方案，迅速在全世界获得推广，目前已经成为Linux系统的标准配置。<br>需要指出的是，SSH只是一种协议，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。<br>　　对于github而言，ssh-key主要是用来确保当前IP（host）是否有权限对远程仓库进行操作，无论是push还是pull。</p>
+</blockquote>
+<p><a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html">ssh入门贴</a></p>
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/command/">command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/program/">program</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/Simon-s-house/2017/10/17/github基础操作/#more">read more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-代码高亮" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -480,67 +546,9 @@
 
 
   
-    <article id="post-atom捣鼓" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/Simon-s-house/2017/05/14/atom捣鼓/" class="article-date">
-      <time datetime="2017-05-14T14:37:47.000Z" itemprop="datePublished">2017-05-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Simon-s-house/2017/05/14/atom捣鼓/">atom捣鼓</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/test/">test</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/Simon-s-house/">&laquo; Prev</a><a class="page-number" href="/Simon-s-house/">1</a><span class="page-number current">2</span><a class="page-number" href="/Simon-s-house/page/3/">3</a><a class="page-number" href="/Simon-s-house/page/4/">4</a><a class="extend next" rel="next" href="/Simon-s-house/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/Simon-s-house/">&laquo; Prev</a><a class="page-number" href="/Simon-s-house/">1</a><span class="page-number current">2</span><a class="page-number" href="/Simon-s-house/page/3/">3</a><a class="page-number" href="/Simon-s-house/page/4/">4</a><a class="page-number" href="/Simon-s-house/page/5/">5</a><a class="extend next" rel="next" href="/Simon-s-house/page/3/">Next &raquo;</a>
     </nav>
   
 </div>

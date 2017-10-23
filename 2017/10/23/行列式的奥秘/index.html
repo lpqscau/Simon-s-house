@@ -3,17 +3,129 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Simon-s-house</title>
+  <title>行列式的奥秘 | Simon-s-house</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="希望给身边的人带来幸福">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Simon-s-house">
-<meta property="og:url" content="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/index.html">
+  <meta name="description" content="行列式这个“怪物”定义初看很奇怪，一堆逆序数什么的让人不免觉得恐惧，但其实它是有实际得不能更实际的物理意义的，理解只需要三步。这酸爽~
+1，行列式是针对一个的矩阵而言的。表示一个维空间到维空间的线性变换。那么什么是线性变换呢？无非是一个压缩或拉伸啊。假想原来空间中有一个维的立方体（随便什么形状），其中立方体内的每一个点都经过这个线性变换，变成维空间中的一个新立方体。
+2，原来立方体有一个体积，新的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="行列式的奥秘">
+<meta property="og:url" content="https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/2017/10/23/行列式的奥秘/index.html">
 <meta property="og:site_name" content="Simon-s-house">
-<meta property="og:description" content="希望给身边的人带来幸福">
+<meta property="og:description" content="行列式这个“怪物”定义初看很奇怪，一堆逆序数什么的让人不免觉得恐惧，但其实它是有实际得不能更实际的物理意义的，理解只需要三步。这酸爽~
+1，行列式是针对一个的矩阵而言的。表示一个维空间到维空间的线性变换。那么什么是线性变换呢？无非是一个压缩或拉伸啊。假想原来空间中有一个维的立方体（随便什么形状），其中立方体内的每一个点都经过这个线性变换，变成维空间中的一个新立方体。
+2，原来立方体有一个体积，新的">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n%5Ctimes+n">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=V_%7B1%7D">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=V_%7B2%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=V_%7B2%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=%5Cdiv+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=V_%7B1%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%5Cleft%28+A+%5Cright%29+%5Ctimes+det%28B%29%3Ddet%28BA%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=B">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=B">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=BA">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=3%5Ctimes+5%3D15">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%5Cleft%28+A+%5Cright%29+%5Ctimes+det%28B%29%3Ddet%28BA%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%5Cleft%28+A+%5Cright%29+%5Ctimes+det%28B%29%3Ddet%28BA%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28AB%29%3Ddet%28BA%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28AB%29%3Ddet%5Cleft%28+A+%5Cright%29+%5Ctimes+det%28B%29%3Ddet%28BA%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%29%5Cne+0">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%29%3D0">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%29%3D0">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n-1">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%29%3D0">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A%5E%7B-1%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=AA%5E%7B-1%7D%3DI+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%29%5Ctimes+det%28A%5E%7B-1%7D++%29%3Ddet%28I%29%3D1">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%29%3D0">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%5E%7B-1%7D+%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A%5E%7B-1%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=F%28k%29%3D%5Cint_%7B-%5Cinfty+%7D%5E%7B%5Cinfty%7D+f%28x%29e%5E%7Bikx%7Ddx">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%29%3D%5Csum_%7B%5Csigma+%5Cin+S_%7Bn%7D+%7D%5E%7B%7D%7B%7D++sgn%28%5Csigma+%29%5Cprod_%7Bi%3D1%7D%5E%7Bn%7D+A_%7B%5Csigma+%28i%29i%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A_%7Bij%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=v">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=v">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=n">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=g%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29%2Bg%28x%29%3Dg%28x%29%2Bf%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29%3D0%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=-f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29%2B%28-f%28x%29%29%3D0%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=F%28k%29%3D%5Cint_%7B-%5Cinfty+%7D%5E%7B%5Cinfty%7D+f%28x%29e%5E%7Bikx%7Ddx">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=F%28k%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=F%28k%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A%28v_%7B1%7D%2Bv_%7B2%7D%29%3DAv_%7B1%7D%2BAv_%7B2%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A%28k+%5Ctimes+v_%7B1%7D%29%3Dk%5Ctimes+++Av_%7B1%7D">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29%2Bg%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=%3D%5Cint_%7B-%5Cinfty+%7D%5E%7B%5Cinfty%7D+%28f%28x%29%2Bg%28x%29%29e%5E%7Bikx%7Ddx">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=%3D%5Cint_%7B-%5Cinfty+%7D%5E%7B%5Cinfty%7D+f%28x%29e%5E%7Bikx%7Ddx%2B%5Cint_%7B-%5Cinfty+%7D%5E%7B%5Cinfty%7D+g%28x%29e%5E%7Bikx%7Ddx%3D">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=g%28x%29%0A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=%5Cint_%7B-%5Cinfty+%7D%5E%7B%5Cinfty%7D+%28kf%28x%29%29e%5E%7Bikx%7Ddx%3Dk%5Cint_%7B-%5Cinfty+%7D%5E%7B%5Cinfty%7D+f%28x%29e%5E%7Bikx%7Ddx">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29%3De%5E%7B-x%5E%7B2%7D+%2F2%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28F%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28F%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=%5Cinfty+%5Ctimes+%5Cinfty+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28A%29%5Ctimes+det%28A%5E%7B-1%7D+%29%3Ddet%28I%29%3D1">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=F">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=A">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=F%28k%29%3D%5Cint_%7B-%5Cinfty+%7D%5E%7B%5Cinfty%7D+f%28x%29e%5E%7Bikx%7Ddx">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29%3D%5Cfrac%7B1%7D%7B2%5Cpi+%7D+%5Cint_%7B-%5Cinfty+%7D%5E%7B%5Cinfty%7D+F%28k%29e%5E%7B-ikx%7Ddk">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28F%29%5Ctimes+det%28F%5E%7B-1%7D+%29%3D1">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=%5Cfrac%7B1%7D%7B2%5Cpi+%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=e%5E%7Bikx%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=e%5E%7Bikx%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=i">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=-i">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=%5Cfrac%7B1%7D%7B2%5Cpi+%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28F%5E%7B-1%7D+%29%3D%5Cfrac%7B1%7D%7B2%5Cpi+%7D+det%28F%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28F%29%5Ctimes+det%28F%5E%7B-1%7D+%29%3D1">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28F%29%3D%5Csqrt%7B2%5Cpi+%7D+">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=F%28k%29%3D%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi+%7D+%7D+%5Cint_%7B-%5Cinfty+%7D%5E%7B%5Cinfty%7D+f%28x%29e%5E%7Bikx%7Ddx">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=f%27%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=D">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=D%3A+++f%28x%29%5Crightarrow+f%27%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=D%3A+++k_%7B1%7D+f%28x%29%2Bk_%7B2%7D+g%28x%29%5Crightarrow+k_%7B1%7Df%27%28x%29%2Bk_%7B2%7Dg%27%28x%29">
+<meta property="og:image" content="http://www.zhihu.com/equation?tex=det%28D%29%3D0">
+<meta property="og:updated_time" content="2017-10-23T04:39:08.888Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Simon-s-house">
-<meta name="twitter:description" content="希望给身边的人带来幸福">
+<meta name="twitter:title" content="行列式的奥秘">
+<meta name="twitter:description" content="行列式这个“怪物”定义初看很奇怪，一堆逆序数什么的让人不免觉得恐惧，但其实它是有实际得不能更实际的物理意义的，理解只需要三步。这酸爽~
+1，行列式是针对一个的矩阵而言的。表示一个维空间到维空间的线性变换。那么什么是线性变换呢？无非是一个压缩或拉伸啊。假想原来空间中有一个维的立方体（随便什么形状），其中立方体内的每一个点都经过这个线性变换，变成维空间中的一个新立方体。
+2，原来立方体有一个体积，新的">
+<meta name="twitter:image" content="http://www.zhihu.com/equation?tex=det%28A%29">
   
     <link rel="alternative" href="/atom.xml" title="Simon-s-house" type="application/atom+xml">
   
@@ -27,9 +139,6 @@
   <link rel="stylesheet" href="/Simon-s-house/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/Simon-s-house/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/Simon-s-house/fancybox/jquery.fancybox.css">
   
@@ -41,8 +150,8 @@
           rootUrl: '/Simon-s-house/',
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -222,9 +331,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-行列式的奥秘" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-行列式的奥秘" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/Simon-s-house/2017/10/23/行列式的奥秘/" class="article-date">
@@ -240,12 +347,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/Simon-s-house/2017/10/23/行列式的奥秘/">行列式的奥秘</a>
+    <h1 class="article-title" itemprop="name">
+      行列式的奥秘
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/FT/">FT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/Fourier-transformation/">Fourier transformation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/linear-algebra/">linear algebra</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/matrix/">matrix</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -336,300 +454,180 @@
 
       
       
-    </div>
-    
-    <div class="article-info article-info-index">
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
       
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/FT/">FT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/Fourier-transformation/">Fourier transformation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/linear-algebra/">linear algebra</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/matrix/">matrix</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-linux换键" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/Simon-s-house/2017/10/23/linux换键/" class="article-date">
-      <time datetime="2017-10-23T00:00:29.000Z" itemprop="datePublished">2017-10-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Simon-s-house/2017/10/23/linux换键/">linux换键</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h3 id="xmodmap原理及使用指南"><a href="#xmodmap原理及使用指南" class="headerlink" title="xmodmap原理及使用指南"></a>xmodmap原理及使用指南</h3><h4 id="1-什么是xmodmap"><a href="#1-什么是xmodmap" class="headerlink" title="1.什么是xmodmap"></a>1.什么是xmodmap</h4><p>xmodmap 是一个在 X 图形环境下用于修改键盘和鼠标按钮映射的工具。比如你可以使用它来实现鼠标的左右键互换，把 caps lock 键改成 ctrl 键， a 键改成 b 键等。</p>
-<p>在介绍 xmodmap 的使用方法之前，先介绍一下系统是如何处理键盘的输入的。</p>
-<ul>
-<li>键盘中的一个按键被按下时，会产生一个“信号”传给操作系统。</li>
-<li>操作系统得到这个信号之后，检查此信号对应的处理方法。</li>
-<li>执行对应的处理方法。</li>
-<li>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/command/">command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/linux/">linux</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/Simon-s-house/2017/10/23/linux换键/#more">read more >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/Simon-s-house/2017/10/23/行列式的奥秘/">行列式的奥秘</a></p>
+        <p><span>文章作者:</span><a href="/Simon-s-house/" title="访问 Simon 的个人博客">Simon</a></p>
+        <p><span>发布时间:</span>2017年10月23日 - 12时36分</p>
+        <p><span>最后更新:</span>2017年10月23日 - 12时39分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/Simon-s-house/2017/10/23/行列式的奥秘/" title="行列式的奥秘">https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/10/23/行列式的奥秘/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://github.com/simonisacoder/Simon-s-house.git/Simon-s-house/Simon-s-house/2017/10/23/行列式的奥秘/　　作者: Simon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/Simon-s-house/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-博客支持数学公式" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/Simon-s-house/2017/10/19/博客支持数学公式/" class="article-date">
-      <time datetime="2017-10-19T03:06:26.000Z" itemprop="datePublished">2017-10-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Simon-s-house/2017/10/19/博客支持数学公式/">博客支持数学公式</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="使博客支持数学公式渲染"><a href="#使博客支持数学公式渲染" class="headerlink" title="使博客支持数学公式渲染"></a>使博客支持数学公式渲染</h2><h3 id="一波三折"><a href="#一波三折" class="headerlink" title="一波三折"></a>一波三折</h3><h4 id="更换引擎"><a href="#更换引擎" class="headerlink" title="更换引擎"></a>更换引擎</h4><p>一开始直接看网上教程卸载原来的渲染引擎，安装新引擎</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">uninstall</span> hexo-renderer-marked <span class="comment">--save</span></div><div class="line">npm <span class="keyword">install</span> hexo-renderer-pandoc <span class="comment">--save</span></div></pre></td></tr></table></figure>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/hexo/">hexo</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/Simon-s-house/2017/10/19/博客支持数学公式/#more">read more >></a>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/Simon-s-house/2017/10/23/linux换键/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux换键</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
-
-
-
-
-
-
-
-
-  
-    <article id="post-感知机算法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/Simon-s-house/2017/10/18/感知机算法/" class="article-date">
-      <time datetime="2017-10-18T09:10:06.000Z" itemprop="datePublished">2017-10-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
     
-      <input type="hidden" class="isFancy" />
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/Simon-s-house/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
     
+        <div id="gitments"></div>
+<script src="/Simon-s-house/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'simonisacoder',
+      repo: 'simonisacoder.cn',
+      oauth: {
+        client_id: 'null',
+        client_secret: 'null',
+      },
+    })
+    gitment.render('gitments')
+</script>
     
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Simon-s-house/2017/10/18/感知机算法/">感知机算法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h3 id="感知机算法-PLA-Proceptron-Learning-Algorithm"><a href="#感知机算法-PLA-Proceptron-Learning-Algorithm" class="headerlink" title="感知机算法-PLA-Proceptron Learning Algorithm"></a>感知机算法-PLA-Proceptron Learning Algorithm</h3><p>感知器作为人工神经网络中最基本的单元，有多个输入和一个输出组成。虽然我们的目的是学习很多神经单元互连的网络，但是我们还是需要先对单个的神经单元进行</p>
-<p>sign ($w^t$*a) &gt; v</p>
-<p>sign($w^t$*a) &gt; v</p>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/ML/">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/machine-learning/">machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/program/">program</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/Simon-s-house/2017/10/18/感知机算法/#more">read more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-uppal" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/Simon-s-house/2017/10/18/uppal/" class="article-date">
-      <time datetime="2017-10-18T00:05:50.000Z" itemprop="datePublished">2017-10-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a href="/Simon-s-house/" title="回到主页"><i class="fa fa-home"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Simon-s-house/2017/10/18/uppal/">uppal</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="what’s-uppaal"><a href="#what’s-uppaal" class="headerlink" title="what’s uppaal"></a>what’s uppaal</h2><h3 id="uppaal简述"><a href="#uppaal简述" class="headerlink" title="uppaal简述"></a>uppaal简述</h3><p>感觉上uppaal最主要有两个功能，一个是实现automata的可视化（xml）<br>第二个是模拟器可以用来验证模型性质</p>
-          
-      
-      
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/Simon-s-house/2017/10/23/linux换键/" title="下一篇: linux换键">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/program/">program</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/realtime-system/">realtime-system</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Simon-s-house/tags/uppaal/">uppaal</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/Simon-s-house/2017/10/18/uppal/#more">read more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/23/行列式的奥秘/">行列式的奥秘</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/23/linux换键/">linux换键</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/19/博客支持数学公式/">博客支持数学公式</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/18/感知机算法/">感知机算法</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/18/uppal/">uppal</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/17/github基础操作/">github基础操作</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/10/14/代码高亮/">代码高亮</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/09/29/test/">不使用图床博客po图片</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/09/08/KNN算法及python小试“/">KNN算法及python问题</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/09/06/新学期半段计划/">新学期半段计划</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/05/14/atom捣鼓/">atom捣鼓</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/04/08/小议言论自由/">小议言论自由</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/28/ICUT/">ICUT</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/14/markdown-pad/">markdown pad</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/07/motion-analysis-of-CCC/">motion analysis of CCC</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/06/markdown-learning/">markdown learning</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/06/markdown进阶/">markdown进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/05/I-am-tired-of-building-this/">I am tired of building this!</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/05/Simon-is-very-angry/">Simon is very angry!</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/05/Simon-s-new-personal-blog/">Simon's new personal blog</a></li><li class="post-list-item"><a class="post-list-link" href="/Simon-s-house/2017/03/04/Simon-s-personal-blog/">Simon's personal blog</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
 
 
 
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/Simon-s-house/page/2/">2</a><a class="page-number" href="/Simon-s-house/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/Simon-s-house/page/5/">5</a><a class="extend next" rel="next" href="/Simon-s-house/page/2/">Next &raquo;</a>
-    </nav>
-  
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
